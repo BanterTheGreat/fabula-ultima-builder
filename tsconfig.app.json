@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "auto generated files/HelloWorld.vue.ts", "auto generated files/TheWelcome.vue.ts", "auto generated files/WelcomeItem.vue.ts", "auto generated files/AboutView.vue.ts", "auto generated files/HomeView.vue.ts"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
