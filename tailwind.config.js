@@ -3,7 +3,11 @@ module.exports = {
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'fabula-green': '#2A4A41'
+      }
+    },
   },
   plugins: [],
 }
