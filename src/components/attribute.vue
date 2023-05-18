@@ -8,7 +8,7 @@ import { ref } from 'vue';
     attribute: Attribute,
   });
   const base = ref(props.attribute?.base);
-  const current = props.attribute?.current;
+  const current = ref(props.attribute?.current);
 
   function onChange(event: any) {
     if (!!props.attribute) {

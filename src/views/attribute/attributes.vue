@@ -6,6 +6,8 @@ const attributes: CharacterAttributes = state.character.attributes;
 </script>
 
 <template>
+  State is {{ attributes.Dexterity.base }}
+  State is {{ attributes.Dexterity.current }}
   <table>
     <tr>
       <th></th>
