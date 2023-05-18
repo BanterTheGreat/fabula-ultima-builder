@@ -4,6 +4,7 @@ export class CharacterState {
   constructor() {
     // We should load the character from cookies here.
     var tempCharacter: Character = {
+      id: crypto.randomUUID(),
       general: { 
         name: "john", pronouns: "him", experience: 1, fabulaPoints: 1, level: 1, zenit: 300 
       }, 
