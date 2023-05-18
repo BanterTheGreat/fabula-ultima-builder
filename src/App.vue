@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import UpdateInfo from './views/Update-Info.vue';
 import attributesVue from './views/attribute/attributes.vue';
 import LogStateVue from './views/Log-State.vue';
+import TraitInfoVue from './views/traits/Trait-info.vue';
 </script>
 
 <template>
+  <TraitInfoVue />
+
+  <br />
   <LogStateVue />
   <attributesVue />
 </template>
