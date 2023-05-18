@@ -1,4 +1,5 @@
 import type { Character } from "./character";
+import { Attribute } from "./character-data/attribute";
 
 export class CharacterState {
   constructor() {
@@ -12,7 +13,14 @@ export class CharacterState {
         identity: "Unknown",
         theme: "Couragious",
         origin: "Sweden",
-      }}
+      },
+      attributes: {
+        Dexterity: new Attribute(),
+        Insight: new Attribute(),
+        Might: new Attribute(),
+        Willpower: new Attribute(),
+      },
+    }
 
     this._character = tempCharacter;
   }
