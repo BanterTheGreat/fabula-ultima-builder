@@ -1,22 +1,10 @@
-<script lang="ts">
-  import { state } from '@/singletons/character-state';
-
-  export default {
-    data() {
-      return {
-        state,
-      
-      }
-    },
-    methods: {
-      updateName() {
-        let character = state.character;
-        character.general.name += "Test";
-
-        state.character = character;
-      }
-    }
-  }
+<script setup lang="ts">
+import { state } from '@/singletons/character-state';
+function updateName(): void {
+  let character = state.character;
+  character.general.name += "Test";
+  state.character = character;
+}
 </script>
 
 <template>
