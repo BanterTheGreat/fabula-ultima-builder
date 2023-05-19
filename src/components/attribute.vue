@@ -6,8 +6,11 @@ import { DieSize } from '@/models/die-size';
 import { state } from '@/singletons/character-state';
 
   function onChange(event: any) {
-      new CharacterUpdater().InProperty(props.selector).UpdatePropertyKeyWithValue<Attribute, DieSize>("base", event.target.value).RecalculateValues();
-    }
+      new CharacterUpdater()
+        .InProperty(props.selector)
+        .UpdatePropertyKeyWithValue<Attribute, DieSize>("base", event.target.value)
+        .RecalculateValues();
+  }
 
   const props = defineProps<{
     name: string,
