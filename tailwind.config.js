@@ -8,6 +8,10 @@ module.exports = {
         'fabula-green': '#2A4A41'
       }
     },
+    fontFamily: {
+      'fabula-header': ['PT Sans Narrow'] ,
+      'fabula': ['Antonio']
+    }
   },
   plugins: [],
 }
