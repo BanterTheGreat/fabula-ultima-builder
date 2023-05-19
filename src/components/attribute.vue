@@ -6,7 +6,7 @@ import { state } from '@/singletons/character-state';
 
   function onChange(event: any) {
       if (attribute != null) {
-        state.updateCharacter<Attribute, DieSize>(props.selector, "base", event.target.value, false)
+        state.UpdateCharacter().InProperty<Character, Attribute>(props.selector).UpdatePropertyKeyWithValue<Attribute, DieSize>("base", event.target.value).Run();
         return;
       }
     }
