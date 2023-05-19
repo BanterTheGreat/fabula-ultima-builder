@@ -1,28 +1,29 @@
 <script setup lang="ts">
+import type { Character } from '@/models/character';
 import { Attribute } from '@/models/character-data/attribute';
-import type { CharacterAttributes } from '@/models/character-data/character-attributes';
 import { DieSize } from '@/models/die-size';
 import { state } from '@/singletons/character-state';
-import { ref } from 'vue';
 
   function onChange(event: any) {
       if (attribute != null) {
         attribute.base = event.target.value;
+        state.updateCharacter<Attribute>(props.selector, attribute, false)
         return;
       }
     }
 
   const props = defineProps<{
     name: string,
-    selector: (a: CharacterAttributes) => Attribute,
+    selector: (a: Character) => Attribute,
   }>();
 
-  const attribute = props.selector(state.character.attributes);
+  const attribute = props.selector(state.character);
 
   if (attribute == null) {
     throw "Error getting Attribute from Selector";
   }
 
+  // We only display this value in our own Select. As such we don't need to actively update it past the first value.
   const baseValue = attribute.base;
 </script>
 

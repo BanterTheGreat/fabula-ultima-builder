@@ -27,14 +27,21 @@ export class CharacterState {
 
   private _character: Character;
 
-  public set character(newCharacter: Character) {
-    // Verification Logic + Other logic here.
-    console.log("Character Setter called!")
-    this._character = newCharacter;
-  }
-
   public get character(): Character {
     console.log("Character Getter called!")
     return this._character;
+  }
+
+  public updateCharacter<Type>(selector: (c: Character) => Type, value: Type, recalculate: boolean = false) {
+    let property = selector(this._character);
+
+    if (typeof property != typeof value) {
+      throw "Trying to update with mismatched types between selected property and value";
+    }
+    property = value;
+    
+    if (recalculate) {
+      // Recalculate here.
+    }
   }
 }
