@@ -32,7 +32,7 @@ export class CharacterState {
     return this._character;
   }
 
-  public updateCharacter<Type>(selector: (c: Character) => Type, value: Type, recalculate: boolean = false) {
+  public updateCharacter<TProperty>(selector: (c: Character) => TProperty, value: TProperty, recalculate: boolean = false) {
     console.log("Attempting to update the character");
     let property = selector(this._character);
 
