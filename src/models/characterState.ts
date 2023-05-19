@@ -33,6 +33,7 @@ export class CharacterState {
   }
 
   public updateCharacter<Type>(selector: (c: Character) => Type, value: Type, recalculate: boolean = false) {
+    console.log("Attempting to update the character");
     let property = selector(this._character);
 
     if (typeof property != typeof value) {
