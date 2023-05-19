@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Character } from '@/models/character';
 import type { Trait } from '@/models/character-data/traits.js';
+import { CharacterUpdater } from '@/models/character-updater';
 import { state } from '@/singletons/character-state'
 
 type TraitKey = keyof typeof state.character.traits
@@ -14,7 +15,7 @@ const traitName = props.traitName as TraitKey
 let TraitInput: string = state.character.traits[traitName]
 
 function updateTrait(event: any) {
-  state.UpdateCharacter().InProperty<Character, Trait>((c) => c.traits).UpdatePropertyKeyWithValue(traitName, event.target.value).Run();
+  new CharacterUpdater().InProperty((c: Character) => c.traits).UpdatePropertyKeyWithValue(traitName, event.target.value);
 }
 
 </script>
