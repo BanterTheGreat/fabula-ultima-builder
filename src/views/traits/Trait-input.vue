@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Trait } from '@/models/character-data/traits';
+import type { Trait } from '@/models/character-data/traits.js';
 import { state } from '@/singletons/character-state'
 
 type TraitKey = keyof typeof state.character.traits
