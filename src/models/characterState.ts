@@ -1,4 +1,6 @@
 import type { Character } from "./character";
+import { Attribute } from "./character-data/attribute";
+import { CharacterUpdater } from "./character-updater";
 
 export class CharacterState {
   constructor() {
@@ -12,18 +14,19 @@ export class CharacterState {
         identity: "Unknown",
         theme: "Couragious",
         origin: "Sweden",
-      }}
+      },
+      attributes: {
+        Dexterity: new Attribute(),
+        Insight: new Attribute(),
+        Might: new Attribute(),
+        Willpower: new Attribute(),
+      },
+    }
 
     this._character = tempCharacter;
   }
 
   private _character: Character;
-
-  public set character(newCharacter: Character) {
-    // Verification Logic + Other logic here.
-    console.log("Character Setter called!")
-    this._character = newCharacter;
-  }
 
   public get character(): Character {
     console.log("Character Getter called!")
