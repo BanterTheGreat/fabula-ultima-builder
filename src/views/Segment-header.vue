@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div style="width: 500px">
+  <div>
     <div class="text-white text-center font-semibold bg-fabula-green rounded uppercase inline-block 
             w-fit px-5 font-fabula-header">
       {{ segmentHeader }}
