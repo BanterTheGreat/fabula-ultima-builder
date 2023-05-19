@@ -22,7 +22,7 @@ export class CharacterState {
         Willpower: new Attribute(),
       },
       bonds: [
-        { name: "", admirationEmotion: Emotions.None, loyaltyEmotion: Emotions.None, affectionEmotion: Emotions.None },
+        { name: "", admirationEmotion: Emotions.Admiration, loyaltyEmotion: Emotions.None, affectionEmotion: Emotions.None },
       ]
     }
 
