@@ -3,7 +3,7 @@ import { state } from '@/singletons/character-state';
 function updateName(): void {
   let character = state.character;
   character.general.name += "Test";
-  state.character = character;
+  // state.character = character;
 }
 </script>
 

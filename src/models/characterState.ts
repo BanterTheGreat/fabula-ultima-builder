@@ -1,5 +1,6 @@
 import type { Character } from "./character";
 import { Attribute } from "./character-data/attribute";
+import { CharacterUpdater } from "./character-updater";
 
 export class CharacterState {
   constructor() {
@@ -30,19 +31,5 @@ export class CharacterState {
   public get character(): Character {
     console.log("Character Getter called!")
     return this._character;
-  }
-
-  public updateCharacter<TProperty>(selector: (c: Character) => TProperty, value: TProperty, recalculate: boolean = false) {
-    console.log("Attempting to update the character");
-    let property = selector(this._character);
-
-    if (typeof property != typeof value) {
-      throw "Trying to update with mismatched types between selected property and value";
-    }
-    property = value;
-    
-    if (recalculate) {
-      // Recalculate here.
-    }
   }
 }
