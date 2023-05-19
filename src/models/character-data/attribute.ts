@@ -2,16 +2,20 @@ import { DieSize } from "../die-size";
 
 export class Attribute {
   constructor() {
-    this.base = DieSize.D6;
-    this._current = this.base;
+    this._base = DieSize.D6;
+    this._current = DieSize.D6;
   }
 
-  public base: DieSize;
-
+  private _base: DieSize;
   private _current: DieSize;
 
-  public set current(newValue: DieSize) {
-    this._current = newValue;
+  public set base(value: DieSize) {
+    this._base = value;
+    this._current = value;
+  };
+
+  public get base() {
+    return this._base;
   }
 
   public get current() {
