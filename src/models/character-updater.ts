@@ -18,7 +18,7 @@ export class CharacterUpdater {
     return this;
   }
 
-  public UpdatePropertyKeyWithValue<TObject, TValue extends TObject[keyof TObject]>(keyOf: keyof TObject, value: TValue) {
+  public UpdateProperty<TObject, TValue extends TObject[keyof TObject]>(keyOf: keyof TObject, value: TValue) {
     const selector = (c: TObject) => c[keyOf] = value;
     this.object = selector(this.object);
     return this;

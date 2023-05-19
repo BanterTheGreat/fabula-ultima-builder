@@ -8,7 +8,7 @@ import { state } from '@/singletons/character-state';
   function onChange(event: any) {
       new CharacterUpdater()
         .InProperty(props.selector)
-        .UpdatePropertyKeyWithValue<Attribute, DieSize>("base", event.target.value)
+        .UpdateProperty<Attribute, DieSize>("base", event.target.value)
         .RecalculateValues();
   }
 

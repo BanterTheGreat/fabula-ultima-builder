@@ -15,7 +15,9 @@ const traitName = props.traitName as TraitKey
 let TraitInput: string = state.character.traits[traitName]
 
 function updateTrait(event: any) {
-  new CharacterUpdater().InProperty((c: Character) => c.traits).UpdatePropertyKeyWithValue(traitName, event.target.value);
+  new CharacterUpdater()
+    .InProperty((c: Character) => c.traits)
+    .UpdateProperty(traitName, event.target.value);
 }
 
 </script>
