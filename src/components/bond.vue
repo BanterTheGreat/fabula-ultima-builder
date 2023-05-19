@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import type { Character } from '@/models/character';
 import type Bond from '@/models/character-data/bond';
+import { CharacterUpdater } from '@/models/character-updater';
 import { state } from '@/singletons/character-state';
 
 const props = defineProps<{
@@ -8,8 +10,8 @@ const props = defineProps<{
 }>()
 
 function updateBondName(event: any) {
-  const text: string = event.target.value;
-  state.updateCharacterArrayPropertyValue<Bond, Bond, string>((c) => c.bonds, props.index, (bond) => bond, "name", text);
+  const name: string = event.target.value;
+  new CharacterUpdater().InProperty((c: Character) => c.bonds).WithIndex(props.index).UpdateProperty<Bond, string>("name", name);
 }
 
 console.log(props.index);

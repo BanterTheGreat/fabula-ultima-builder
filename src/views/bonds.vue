@@ -3,11 +3,15 @@ import { state } from '@/singletons/character-state';
 import BondVue from '@/components/bond.vue';
 import type Bond from '@/models/character-data/bond';
 import { Emotions } from '@/models/character-data/bond';
+import { CharacterUpdater } from '@/models/character-updater';
+import type { Character } from '@/models/character';
 
 function AddBond() {
   let length = bondAmount();
   if (length < 6) {
-    state.updateCharacterArrayField<Bond, Bond>((c) => c.bonds, length, { name: "", admirationEmotion: Emotions.None, loyaltyEmotion: Emotions.None, affectionEmotion: Emotions.None }); 
+    new CharacterUpdater()
+      .InProperty((c: Character) => c.bonds)
+      .UpdateIndex<Bond>(length, { name: "", admirationEmotion: Emotions.None, loyaltyEmotion: Emotions.None, affectionEmotion: Emotions.None })
   }
 }
 
