@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import type { Character } from '@/models/character';
 import { Attribute } from '@/models/character-data/attribute';
+import { CharacterUpdater } from '@/models/character-updater';
 import { DieSize } from '@/models/die-size';
 import { state } from '@/singletons/character-state';
 
   function onChange(event: any) {
-      if (attribute != null) {
-        state.updateCharacter<Attribute, DieSize>(props.selector, "base", event.target.value, false)
-        return;
-      }
-    }
+      new CharacterUpdater()
+        .InProperty(props.selector)
+        .UpdateProperty<Attribute, DieSize>("base", event.target.value)
+        .RecalculateValues();
+  }
 
   const props = defineProps<{
     name: string,
