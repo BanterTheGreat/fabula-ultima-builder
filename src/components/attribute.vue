@@ -6,8 +6,7 @@ import { state } from '@/singletons/character-state';
 
   function onChange(event: any) {
       if (attribute != null) {
-        attribute.base = event.target.value;
-        state.updateCharacter<Attribute>(props.selector, attribute, false)
+        state.updateCharacter<Attribute, DieSize>(props.selector, "base", event.target.value, false)
         return;
       }
     }

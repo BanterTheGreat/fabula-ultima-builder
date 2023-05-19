@@ -32,17 +32,23 @@ export class CharacterState {
     return this._character;
   }
 
-  public updateCharacter<TProperty>(selector: (c: Character) => TProperty, value: TProperty, recalculate: boolean = false) {
+  public updateCharacter<TParentProperty, TValue extends TParentProperty[keyof TParentProperty]>(parentSelector: (c: Character) => TParentProperty, objectKey: keyof TParentProperty, value: TValue, recalculate: boolean = false) {
     console.log("Attempting to update the character");
-    let property = selector(this._character);
+    let property = parentSelector(this._character);
 
-    if (typeof property != typeof value) {
-      throw "Trying to update with mismatched types between selected property and value";
+    if (typeof property[objectKey] != typeof value) {
+      // This can only happen if we start throwing untyped variables in this. We shouldn't do that to begin with.
+      throw "Trying to update with mismatched types between property to update and value";
     }
-    property = value;
-    
+
+    property[objectKey] = value;
+
+    if (parentSelector(this._character)[objectKey] != value) {
+      throw "Something went wrong with updating the state, the value hasn't updated."
+    }
+
     if (recalculate) {
-      // Recalculate here.
+      // Call Recalculate function here.
     }
   }
 }
