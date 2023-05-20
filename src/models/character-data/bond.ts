@@ -1,16 +1,8 @@
-export enum Emotions {
-  None = "none",
-  Admiration = "admiration",
-  Inferiority = "inferiority",
-  Loyalty = "loyalty",
-  Mistrust = "mistrust",
-  Affection = "affection",
-  Hatred = "hatred"
-}
+import type { Emotion } from "@/enums/emotion";
 
 export default interface Bond {
   name: string,
-  admirationEmotion: Emotions.None | Emotions.Admiration | Emotions.Inferiority,
-  loyaltyEmotion: Emotions.None | Emotions.Loyalty | Emotions.Mistrust,
-  affectionEmotion: Emotions.None | Emotions.Affection | Emotions.Hatred
+  admirationEmotion: Emotion.None | Emotion.Admiration | Emotion.Inferiority,
+  loyaltyEmotion: Emotion.None | Emotion.Loyalty | Emotion.Mistrust,
+  affectionEmotion: Emotion.None | Emotion.Affection | Emotion.Hatred
 }

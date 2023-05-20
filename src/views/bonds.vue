@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { state } from '@/singletons/state.js';
 import type Bond from '@/models/character-data/bond';
-import { Emotions } from '@/models/character-data/bond';
 import { CharacterUpdater } from '@/models/character-updater';
 import type { Character } from '@/models/character';
 import BondDisplayVue from '@/components/bond-display.vue';
+import { Emotion } from '@/enums/emotion';
 
 function AddBond() {
   let length = bondAmount();
   if (length < 6) {
     new CharacterUpdater()
       .InProperty((c: Character) => c.bonds)
-      .UpdateIndex<Bond>(length, { name: "", admirationEmotion: Emotions.None, loyaltyEmotion: Emotions.None, affectionEmotion: Emotions.None })
+      .UpdateIndex<Bond>(length, { name: "", admirationEmotion: Emotion.None, loyaltyEmotion: Emotion.None, affectionEmotion: Emotion.None })
   }
 }
 
