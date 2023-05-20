@@ -25,8 +25,8 @@ export class CharacterCalculator {
   }
 
   private CalculateBaseStatistics() {
-    this.character.statistics.healthPoints = (this.character.attributes.Might * 5) + this.character.general.level;
-    this.character.statistics.mindPoints = (this.character.attributes.Willpower * 5) + this.character.general.level;
+    this.character.statistics.healthPoints.calculatedMaxValue = (this.character.attributes.Might.current * 5) + this.character.general.level;
+    this.character.statistics.mindPoints.calculatedMaxValue = (this.character.attributes.Willpower.current * 5) + this.character.general.level;
     // Calculate Initiative from ??? and armor.
     // Calculate Defense from Equipment.
     // Calculate MagicDefense from Equipment.

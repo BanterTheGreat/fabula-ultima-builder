@@ -4,6 +4,10 @@
   import SegmentBody from './components/Segment-body.vue';
   import Segment from './views/Segment.vue';
   import Statistic from './views/statistics.vue';
+  import { CharacterCalculator } from './models/character-calculator';
+
+  // Initial Calculating of values.
+  new CharacterCalculator().Recalculate("statistics");
 </script>
 
 <template>

@@ -53,7 +53,7 @@ export class CharacterUpdater {
    * Triggers an recalculation of every automated field in the character model.
    */
   public RecalculateValues() {
-    new CharacterCalculator()
+    new CharacterCalculator().RecalculateAll();
     // This should run the calculator, which would calculate all modifers and values that depend on others.
   }
 }
