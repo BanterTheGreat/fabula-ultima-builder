@@ -1,6 +1,6 @@
 import type { Character } from "./character";
 import { Attribute } from "./character-data/attribute";
-import { CharacterUpdater } from "./character-updater";
+import { Emotions } from "./character-data/bond";
 
 export class CharacterState {
   constructor() {
@@ -21,6 +21,9 @@ export class CharacterState {
         Might: new Attribute(),
         Willpower: new Attribute(),
       },
+      bonds: [
+        { name: "", admirationEmotion: Emotions.Admiration, loyaltyEmotion: Emotions.None, affectionEmotion: Emotions.None },
+      ]
     }
 
     this._character = tempCharacter;
