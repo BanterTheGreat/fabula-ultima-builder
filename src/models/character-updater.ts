@@ -1,4 +1,4 @@
-import { state } from "@/singletons/character-state";
+import { state } from "@/singletons/state";
 
 export class CharacterUpdater {
   constructor() {

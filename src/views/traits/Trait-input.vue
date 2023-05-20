@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Character } from '@/models/character';
 import { CharacterUpdater } from '@/models/character-updater';
-import { state } from '@/singletons/character-state'
+import { state } from '@/singletons/state.js'
 
 type TraitKey = keyof typeof state.character.traits
 

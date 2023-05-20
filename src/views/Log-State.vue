@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { state } from '@/singletons/character-state';
+import { state } from '@/singletons/state.js';
 function logState() {
   console.log(state);
 }

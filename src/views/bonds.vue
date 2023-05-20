@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { state } from '@/singletons/character-state';
+import { state } from '@/singletons/state.js';
 import BondVue from '@/components/bond.vue';
 import type Bond from '@/models/character-data/bond';
 import { Emotions } from '@/models/character-data/bond';
