@@ -4,19 +4,24 @@ import attributesVue from './views/attribute/attributes.vue';
 import Bonds from './views/bonds.vue';
 import LogStateVue from './views/Log-State.vue';
 import TraitInfoVue from './views/traits/Trait-info.vue';
+import SegmentHeader from './components/Segment-header.vue';
+import SegmentBody from './components/Segment-body.vue';
+import Segment from './views/Segment.vue';
+
 </script>
 
 <template>
+  <Segment title="Traits">
+    <SegmentBody>
+      testqewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+    </SegmentBody>
+  </Segment>
 
-<SegmentHeader segmentHeader="Traits"/>
-
-  <TraitInfoVue />
-
-  <br />
-  <LogStateVue />
-  <attributesVue />
-  <Bonds />
+  <Segment title="very long name for testing">
+      <SegmentBody>
+        hellohello
+      </SegmentBody>
+  </Segment>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
