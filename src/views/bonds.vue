@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { state } from '@/singletons/state.js';
-import type Bond from '@/models/character-data/bond';
+import type Bond from '@/models/character/bond';
 import { CharacterUpdater } from '@/models/character-updater';
 import type { Character } from '@/models/character';
 import BondDisplayVue from '@/components/bond-display.vue';

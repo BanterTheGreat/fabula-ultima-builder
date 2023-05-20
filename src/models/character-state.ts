@@ -1,11 +1,10 @@
 import { Emotion } from "@/enums/emotion";
 import type { Character } from "./character";
-import { Attribute } from "./character-data/attribute";
-import { JsonHelper } from "./json-creator";
+import { JsonHelper } from "../helpers/json-helper";
+import { Attribute } from "./character/attribute";
 
 export class CharacterState {
   constructor() {
-    new JsonHelper();
     // We should load the character from cookies here.
     var tempCharacter: Character = {
       id: crypto.randomUUID(),

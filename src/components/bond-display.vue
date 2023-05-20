@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Emotion } from '@/enums/emotion';
 import type { Character } from '@/models/character';
-import type Bond from '@/models/character-data/bond';
+import type Bond from '@/models/character/bond';
 import { CharacterUpdater } from '@/models/character-updater';
 import { ref } from 'vue';
 
