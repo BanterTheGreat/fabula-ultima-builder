@@ -5,12 +5,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'fabula-green': '#2A4A41'
-      }
+        'fabula-green': '#2A4A41',
+        'fabula-segment-border': '#79A49A',
+      },
     },
     fontFamily: {
       'fabula-header': ['PT Sans Narrow'] ,
-      'fabula': ['Antonio']
+      'fabula': ['Antonio'],
     }
   },
   plugins: [],
