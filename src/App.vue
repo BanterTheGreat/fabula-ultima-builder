@@ -16,7 +16,7 @@ import Segment from './views/Segment.vue';
     </SegmentBody>
   </Segment>
 
-  <Segment title="bonds">
+  <Segment title="very long name for testing">
       <SegmentBody>
         hellohello
       </SegmentBody>
