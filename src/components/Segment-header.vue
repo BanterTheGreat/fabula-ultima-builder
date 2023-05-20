@@ -9,6 +9,7 @@ const props = defineProps({
               w-fit px-5 font-fabula-header">
     {{ segmentHeader }}
   </div>
+  <div class="divider"></div>
 </template>
 
 <style scoped>
