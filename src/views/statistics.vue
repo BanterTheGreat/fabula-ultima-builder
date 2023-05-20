@@ -5,16 +5,33 @@ import StatisticProgressDisplay from '@/components/statistic-progress-display.vu
 </script>
 
 <template>
-  <ol>
-    <li><statisticDisplay name="Defense" v-bind:selector="(c: Character) => c.statistics.defense"/></li>
-    <li><statisticDisplay name="Magic Defense" v-bind:selector="(c: Character) => c.statistics.magicDefense"/></li>
-    <li><statisticDisplay name="Initiative" v-bind:selector="(c: Character) => c.statistics.initiative"/></li>
-  </ol>
-  <ol>
-    <li><StatisticProgressDisplay name="HP" v-bind:selector="(c: Character) => c.statistics.healthPoints" /></li>
-    <li><StatisticProgressDisplay name="MP" v-bind:selector="(c: Character) => c.statistics.mindPoints" /></li>
-    <li><StatisticProgressDisplay name="IP" v-bind:selector="(c: Character) => c.statistics.inventoryPoints" /></li>
-  </ol>
+  <div class="grid grid-rows-3 grid-cols-5 grid-flow-col">
+    <div class="col-span-2">
+        <statisticDisplay name="Defense" v-bind:selector="(c: Character) => c.statistics.defense"/>
+    </div>
+
+    <div class="col-span-2">
+        <statisticDisplay name="M. Defense" v-bind:selector="(c: Character) => c.statistics.magicDefense"/>
+    </div>
+
+    <div class="col-span-2">
+        <statisticDisplay name="Initiative" v-bind:selector="(c: Character) => c.statistics.initiative"/>
+    </div>
+
+
+    <div class="col-span-3">
+      <StatisticProgressDisplay name="HP" v-bind:selector="(c: Character) => c.statistics.healthPoints" />
+    </div>
+
+    <div class="col-span-3">
+      <StatisticProgressDisplay name="MP" v-bind:selector="(c: Character) => c.statistics.mindPoints" />
+    </div>
+
+    <div class="col-span-3">
+      <StatisticProgressDisplay name="IP" v-bind:selector="(c: Character) => c.statistics.inventoryPoints" />
+    </div>
+
+  </div>
 </template>
 
 <style>

@@ -12,5 +12,13 @@ const statistic = props.selector(state.character);
 </script>
 
 <template>
-  {{ name }} {{ statistic.calculatedValue }}
+  <div class="grid grid-cols-4">
+    <div class="col-span-3">
+    {{ name }}
+    </div>
+
+    <div>
+    {{ statistic.calculatedValue }}
+    </div>
+  </div>
 </template>

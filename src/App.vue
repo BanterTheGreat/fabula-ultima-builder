@@ -23,7 +23,7 @@
       </SegmentBody>
   </Segment>
 
-  <Segment title="Statistics">
+  <Segment title="Battle Statistics">
       <SegmentBody>
         <Statistic />
       </SegmentBody>
