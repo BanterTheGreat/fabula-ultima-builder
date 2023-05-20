@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Character } from '@/models/character';
-import type { Trait } from '@/models/character-data/traits.js';
 import { CharacterUpdater } from '@/models/character-updater';
 import { state } from '@/singletons/character-state'
 
