@@ -1,0 +1,34 @@
+import { state } from "@/singletons/state";
+import type { Character } from "./character";
+
+export type CalculationOptions = "statistics";
+
+export class CharacterCalculator {
+
+  constructor() {
+    this.character = state.character;
+  }
+
+  private character: Character;
+
+  public RecalculateAll() {
+    this.CalculateBaseStatistics();
+    // Preferrably, I would just like a big Array<Modifier> or something. That we read out and use to decide what needs updating where.
+  } 
+
+  public Recalculate(subject: CalculationOptions) {
+    switch (subject) {
+      case "statistics":
+        this.CalculateBaseStatistics();
+        break;
+    }
+  }
+
+  private CalculateBaseStatistics() {
+    this.character.statistics.healthPoints.calculatedMaxValue = (this.character.attributes.Might.current * 5) + this.character.general.level;
+    this.character.statistics.mindPoints.calculatedMaxValue = (this.character.attributes.Willpower.current * 5) + this.character.general.level;
+    // Calculate Initiative from ??? and armor.
+    // Calculate Defense from Equipment.
+    // Calculate MagicDefense from Equipment.
+  }
+}

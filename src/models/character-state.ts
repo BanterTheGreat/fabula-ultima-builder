@@ -23,7 +23,15 @@ export class CharacterState {
       },
       bonds: [
         { name: "", admirationEmotion: Emotions.Admiration, loyaltyEmotion: Emotions.None, affectionEmotion: Emotions.None },
-      ]
+      ],
+      statistics: {
+        healthPoints: { value: 0, calculatedValue: 0, maxValue: 0, calculatedMaxValue: 0 },
+        mindPoints: { value: 0, calculatedValue: 0, maxValue: 0, calculatedMaxValue: 0 },
+        inventoryPoints: { value: 0, calculatedValue: 0, maxValue: 0, calculatedMaxValue: 0 },
+        defense: { value: 0, calculatedValue: 0 },
+        magicDefense: { value: 0, calculatedValue: 0 },
+        initiative: { value: 0, calculatedValue: 0 },
+      }
     }
 
     this._character = tempCharacter;
