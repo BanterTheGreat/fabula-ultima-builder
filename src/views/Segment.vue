@@ -10,6 +10,7 @@ const props = defineProps({
 
 <template>
     <SegmentHeader v-bind:segmentHeader="props.title" />
+    <div class="divider"></div>
     <SegmentBody>
         test
     </SegmentBody>
