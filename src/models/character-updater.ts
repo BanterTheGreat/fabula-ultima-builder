@@ -1,4 +1,5 @@
 import { state } from "@/singletons/state";
+import { CharacterCalculator } from "./character-calculator";
 
 export class CharacterUpdater {
   constructor() {
@@ -52,6 +53,7 @@ export class CharacterUpdater {
    * Triggers an recalculation of every automated field in the character model.
    */
   public RecalculateValues() {
+    new CharacterCalculator()
     // This should run the calculator, which would calculate all modifers and values that depend on others.
   }
 }

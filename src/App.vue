@@ -1,25 +1,27 @@
 <script setup lang="ts">
-
-import attributesVue from './views/attribute/attributes.vue';
-import Bonds from './views/bonds.vue';
-import LogStateVue from './views/Log-State.vue';
-import TraitInfoVue from './views/traits/Trait-info.vue';
-import SegmentHeader from './components/Segment-header.vue';
-import SegmentBody from './components/Segment-body.vue';
-import Segment from './views/Segment.vue';
-
+  import attributesVue from './views/attribute/attributes.vue';
+  import Bonds from './views/bonds.vue';
+  import SegmentBody from './components/Segment-body.vue';
+  import Segment from './views/Segment.vue';
+  import Statistic from './views/statistics.vue';
 </script>
 
 <template>
-  <Segment title="Traits">
+  <Segment title="Attributes">
     <SegmentBody>
-      testqewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+      <attributesVue />
     </SegmentBody>
   </Segment>
 
-  <Segment title="very long name for testing">
+  <Segment title="Bonds">
       <SegmentBody>
-        hellohello
+        <Bonds />
+      </SegmentBody>
+  </Segment>
+
+  <Segment title="Statistics">
+      <SegmentBody>
+        <Statistic />
       </SegmentBody>
   </Segment>
 </template>

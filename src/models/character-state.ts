@@ -25,12 +25,12 @@ export class CharacterState {
         { name: "", admirationEmotion: Emotions.Admiration, loyaltyEmotion: Emotions.None, affectionEmotion: Emotions.None },
       ],
       statistics: {
-        healthPoints: { current: 0, max: 0, calculatedMax: 0 },
-        mindPoints: { current: 0, max: 0, calculatedMax: 0 },
-        inventoryPoints: { current: 0, max: 0, calculatedMax: 0 },
-        defense: { current: 0, max: 0, calculatedMax: 0 },
-        magicDefense: { current: 0, max: 0, calculatedMax: 0 },
-        initiative: { current: 0, max: 0, calculatedMax: 0 },
+        healthPoints: { value: 0, calculatedValue: 0, maxValue: 0, calculatedMaxValue: 0 },
+        mindPoints: { value: 0, calculatedValue: 0, maxValue: 0, calculatedMaxValue: 0 },
+        inventoryPoints: { value: 0, calculatedValue: 0, maxValue: 0, calculatedMaxValue: 0 },
+        defense: { value: 0, calculatedValue: 0 },
+        magicDefense: { value: 0, calculatedValue: 0 },
+        initiative: { value: 0, calculatedValue: 0 },
       }
     }
 

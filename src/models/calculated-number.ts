@@ -1,5 +1,4 @@
 export interface CalculatedNumber {
-  max: number,
-  current: number,
-  calculatedMax: number,
+  value: number,
+  calculatedValue: number,
 }
