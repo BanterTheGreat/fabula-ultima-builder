@@ -3,7 +3,7 @@ import type { Character } from '@/models/character';
 import { Attribute } from '@/models/character-data/attribute';
 import { CharacterUpdater } from '@/models/character-updater';
 import { DieSize } from '@/models/die-size';
-import { state } from '@/singletons/state.js';
+import { state } from '@/singletons/state';
 
   function onChange(event: any) {
       new CharacterUpdater()
