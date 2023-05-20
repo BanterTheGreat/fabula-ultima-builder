@@ -6,8 +6,8 @@ import Attribute from '@/components/attribute.vue';
   <table>
     <tr>
       <th></th>
-      <th>Base</th>
-      <th>Current</th>
+      <th class="uppercase">Base</th>
+      <th class="uppercase">Current</th>
     </tr>
     <tr><Attribute name = "Dexterity" v-bind:selector="(char) => char.attributes.Dexterity"/></tr>
     <tr><Attribute name = "Insight" v-bind:selector="(char) => char.attributes.Insight"/></tr>

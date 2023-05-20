@@ -28,7 +28,7 @@ import { state } from '@/singletons/character-state';
 </script>
 
 <template>
-  <td>{{ name }}</td>
+  <td class="uppercase" >{{ name }}</td>
   <td>
     D<select v-model="baseValue" @change="event => onChange(event)">
       <option></option>
