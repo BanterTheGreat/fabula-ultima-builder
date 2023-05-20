@@ -12,7 +12,7 @@ import Segment from './views/Segment.vue';
 <template>
   <Segment title="Traits">
     <SegmentBody>
-      test
+      testqewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
     </SegmentBody>
   </Segment>
 
