@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="">
+    <div>
         <SegmentHeader v-bind:segmentHeader="props.title" />
         <slot></slot>
     </div>
