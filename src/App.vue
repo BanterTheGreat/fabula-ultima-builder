@@ -6,17 +6,14 @@ import TraitInfoVue from './views/traits/Trait-info.vue';
 import SegmentHeader from './components/Segment-header.vue';
 import SegmentBody from './components/Segment-body.vue';
 
+import Segment from './views/Segment.vue';
+
 </script>
 
 <template>
-  <SegmentHeader segmentHeader="Traits" />
-  <SegmentBody/>
-
-  <TraitInfoVue />
-
-  <br />
-  <LogStateVue />
-  <attributesVue />
+  <Segment title="Traits">
+    <SegmentBody>test</SegmentBody>
+  </Segment>
 </template>
 
 <style scoped></style>

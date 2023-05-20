@@ -4,7 +4,7 @@
 
 <template>
   <div class="border border-fabula-segment-border rounded fabula-segment">
-    testetsetetstetstese
+    <slot></slot>
   </div>
 </template>
 
