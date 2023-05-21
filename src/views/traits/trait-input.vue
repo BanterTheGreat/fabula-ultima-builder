@@ -26,10 +26,10 @@ function updateTrait(event: any) {
 </script>
 
 <template>
-  <div :class=colspanLabel>
+  <div class="text-center" :class=colspanLabel>
     {{ traitName }}:
   </div>
   <div :class=colspanInput>
-    <input id="trait-identity" v-model="TraitInput" @change="updateTrait" />
+    <input class="w-full" id="trait-identity" v-model="TraitInput" @change="updateTrait" />
   </div>
 </template>

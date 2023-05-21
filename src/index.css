@@ -2,20 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-fabula-header-green: #2A4A41;
+    --color-fabula-segment-green: #79A49A;
+  }
+}
+
 .fabula-segment {
-    background: rgb(237, 246, 238);
-    background: -moz-linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
-    background: linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf6ee", endColorstr="#fdfefe", GradientType=1);
+  padding: 1%;
+  background: rgb(237, 246, 238);
+  background: -moz-linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
+  background: linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf6ee", endColorstr="#fdfefe", GradientType=1);
 }
 
 .divider {
-    border-bottom: 1px solid;
-    color: #2A4A41;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: -1px;
+  border-bottom: 1px solid;
+  color: var(--color-fabula-header-green);
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: -1px;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--color-fabula-segment-green);
 }
 
 /* The col span classes above 3 in tailwind are broken so I added these manually */
