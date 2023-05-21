@@ -1,10 +1,10 @@
 import type { CalculatedNumber } from "../calculated-number";
-import type { CalculatedNumberWithMaximum } from "../calculated-number-with-maximum";
+import type { CalculatedNumberMaximum } from "../calculated-number-maximum";
 
 export interface Statistics {
-  healthPoints: CalculatedNumberWithMaximum,
-  mindPoints: CalculatedNumberWithMaximum,
-  inventoryPoints: CalculatedNumberWithMaximum,
+  healthPoints: CalculatedNumberMaximum,
+  mindPoints: CalculatedNumberMaximum,
+  inventoryPoints: CalculatedNumberMaximum,
   defense: CalculatedNumber,
   magicDefense: CalculatedNumber,
   initiative: CalculatedNumber,

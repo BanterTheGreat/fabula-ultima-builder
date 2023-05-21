@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { CalculatedNumberWithMaximum } from '@/models/calculated-number-with-maximum';
+import type { CalculatedNumberMaximum } from '@/models/calculated-number-maximum';
 import type { Character } from '@/models/character';
 import { state } from '@/singletons/state';
 
 const props = defineProps<{
-  selector: (c: Character) => CalculatedNumberWithMaximum,
+  selector: (c: Character) => CalculatedNumberMaximum,
   name: string,
 }>()
 
@@ -12,5 +12,5 @@ const statistic = props.selector(state.character);
 </script>
 
 <template>
-  {{ name }} {{ statistic.calculatedValue }}/{{ statistic.calculatedMaxValue }}
+  {{ name }} {{ statistic.calculatedValue }}/{{ statistic.calculatedValue }}
 </template>
