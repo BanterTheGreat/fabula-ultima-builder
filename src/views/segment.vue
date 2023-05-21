@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SegmentHeader from '@/components/Segment-header.vue';
+import SegmentHeader from '@/components/segment-header.vue';
 
 const props = defineProps({
     title: String
