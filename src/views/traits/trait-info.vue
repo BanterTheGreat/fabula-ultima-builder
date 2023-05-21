@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TraitInput from './Trait-input.vue'
+import TraitInput from './rait-input.vue'
 </script>
 
 <template>
