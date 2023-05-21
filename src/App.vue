@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import attributesVue from './views/attribute/attributes.vue';
   import Bonds from './views/bonds.vue';
-  import SegmentBody from './components/Segment-body.vue';
-  import Segment from './views/Segment.vue';
+  import SegmentBody from './components/segment-body.vue';
+  import Segment from './views/segment.vue';
   import Statistic from './views/statistics.vue';
   import { CharacterCalculator } from './models/character-calculator';
 
