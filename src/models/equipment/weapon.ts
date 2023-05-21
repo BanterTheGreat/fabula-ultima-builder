@@ -2,10 +2,8 @@ import type { CharacterAttribute } from "@/enums/character-attribute";
 import type { DamageType } from "@/enums/damage-type";
 import type { WeaponCategory } from "@/enums/weapon-category";
 import type { WeaponRange } from "@/enums/weapon-range";
-import type { WeaponId } from "@/enums/weapon-id";
 
 export interface Weapon {
-  id: WeaponId,
   imageUrl?: string,
   name: string,
   cost: number,
@@ -17,6 +15,6 @@ export interface Weapon {
   range: WeaponRange,
   accuracyAttribute1: CharacterAttribute,
   accuracyAttribute2: CharacterAttribute,
-  quality?: string,
+  quality: string,
   martial: boolean,
 }
