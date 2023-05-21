@@ -1,7 +1,9 @@
 import type { Shield } from "@/models/equipment/shield";
+import { ShieldId } from "@/enums/shield-id";
 
 export const ShieldData: Array<Shield> = [
   {
+    id: ShieldId.BronzeShield,
     imageUrl: "",
     name: "Bronze Shield",
     cost: 100,
@@ -12,6 +14,7 @@ export const ShieldData: Array<Shield> = [
     martial: false,
   },
   {
+    id: ShieldId.SteelShield,
     imageUrl: "",
     name: "Runic Shield",
     cost: 150,

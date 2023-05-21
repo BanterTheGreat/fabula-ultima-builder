@@ -1,9 +1,11 @@
 import { ArmorDefenseType } from "@/enums/armor-defense-type";
+import { ArmorId } from "@/enums/armor-id";
 import { CharacterAttribute } from "@/enums/character-attribute";
 import type { Armor } from "@/models/equipment/armor";
 
 export const ArmorData: Array<Armor> = [
   {
+    id: ArmorId.NoArmor,
     imageUrl: "",
     name: "No Armor",
     cost: 0,
@@ -14,6 +16,7 @@ export const ArmorData: Array<Armor> = [
     martial: false,
   },
   {
+    id: ArmorId.SilkShirt,
     imageUrl: "",
     name: "Silk Shirt",
     cost: 100,
@@ -24,6 +27,7 @@ export const ArmorData: Array<Armor> = [
     martial: false,
   },
   {
+    id: ArmorId.TravelGarb,
     imageUrl: "",
     name: "Travel Garb",
     cost: 100,
@@ -34,6 +38,7 @@ export const ArmorData: Array<Armor> = [
     martial: false,
   },
   {
+    id: ArmorId.CombatTunic,
     imageUrl: "",
     name: "Combat Tunic",
     cost: 150,
@@ -44,6 +49,7 @@ export const ArmorData: Array<Armor> = [
     martial: false,
   },
   {
+    id: ArmorId.SageRobe,
     imageUrl: "",
     name: "Sage Robe",
     cost: 200,
@@ -54,6 +60,7 @@ export const ArmorData: Array<Armor> = [
     martial: false,
   },
   {
+    id: ArmorId.Brigandine,
     imageUrl: "",
     name: "Brigandine",
     cost: 150,
@@ -64,6 +71,7 @@ export const ArmorData: Array<Armor> = [
     martial: true,
   },
   {
+    id: ArmorId.BronzePlate,
     imageUrl: "",
     name: "Bronze Plate",
     cost: 200,
@@ -74,6 +82,7 @@ export const ArmorData: Array<Armor> = [
     martial: true,
   },
   {
+    id: ArmorId.RunicPlate,
     imageUrl: "",
     name: "Runic Plate",
     cost: 250,
@@ -84,6 +93,7 @@ export const ArmorData: Array<Armor> = [
     martial: true,
   },
   {
+    id: ArmorId.SteelPlate,
     imageUrl: "",
     name: "Steel Plate",
     cost: 300,

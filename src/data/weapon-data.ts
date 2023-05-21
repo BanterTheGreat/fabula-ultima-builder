@@ -1,12 +1,14 @@
 import { CharacterAttribute } from "@/enums/character-attribute";
 import { DamageType } from "@/enums/damage-type";
 import { WeaponCategory } from "@/enums/weapon-category";
+import { WeaponId } from "@/enums/weapon-id";
 import { WeaponRange } from "@/enums/weapon-range";
 import type { Weapon } from "@/models/equipment/weapon";
 
-export const WeaponsData: Array<Weapon> = [
+export const WeaponData: Array<Weapon> = [
   // Arcane
   {
+    id: WeaponId.Staff,
     imageUrl: "",
     name: "Staff",
     cost: 100,
@@ -22,6 +24,7 @@ export const WeaponsData: Array<Weapon> = [
     martial: false,
   },
   {
+    id: WeaponId.Tome,
     imageUrl: "",
     name: "Tome",
     cost: 100,
@@ -38,6 +41,7 @@ export const WeaponsData: Array<Weapon> = [
   },
   // Bows
   {
+    id: WeaponId.Crossbow,
     imageUrl: "",
     name: "Crossbow",
     cost: 150,
@@ -53,6 +57,7 @@ export const WeaponsData: Array<Weapon> = [
     martial: false,
   },
   {
+    id: WeaponId.Shortbow,
     imageUrl: "",
     name: "Shortbow",
     cost: 200,
@@ -69,6 +74,7 @@ export const WeaponsData: Array<Weapon> = [
   },
   // Brawling
   {
+    id: WeaponId.Unarmed,
     imageUrl: "",
     name: "Unarmed Strike",
     cost: 0,
@@ -84,6 +90,7 @@ export const WeaponsData: Array<Weapon> = [
     martial: false,
   },
   {
+    id: WeaponId.ImprovisedMelee,
     imageUrl: "",
     name: "Improvised (Melee)",
     cost: 0,
@@ -99,6 +106,7 @@ export const WeaponsData: Array<Weapon> = [
     martial: false,
   },
   {
+    id: WeaponId.IronKnuckle,
     imageUrl: "",
     name: "Iron Knuckle",
     cost: 150,
@@ -115,6 +123,7 @@ export const WeaponsData: Array<Weapon> = [
   },
   // Dagger
   {
+    id: WeaponId.Dagger,
     imageUrl: "",
     name: "Dagger",
     cost: 150,
@@ -131,6 +140,7 @@ export const WeaponsData: Array<Weapon> = [
   },
   // Pistol
   {
+    id: WeaponId.Pistol,
     imageUrl: "",
     name: "Pistol",
     cost: 250,
@@ -147,6 +157,7 @@ export const WeaponsData: Array<Weapon> = [
   },
   // Flail
   {
+    id: WeaponId.ChainWhip,
     imageUrl: "",
     name: "Chain Whip",
     cost: 150,
@@ -163,6 +174,7 @@ export const WeaponsData: Array<Weapon> = [
   },
   // Heavy Category
   {
+    id: WeaponId.IronHammer,
     imageUrl: "",
     name: "Iron Hammer",
     cost: 200,
@@ -178,6 +190,7 @@ export const WeaponsData: Array<Weapon> = [
     martial: false,
   },
   {
+    id: WeaponId.BroadAxe,
     imageUrl: "",
     name: "Broadaxe",
     cost: 250,
@@ -193,6 +206,7 @@ export const WeaponsData: Array<Weapon> = [
     martial: true,
   },
   {
+    id: WeaponId.WarAxe,
     imageUrl: "",
     name: "Waraxe",
     cost: 250,
@@ -209,6 +223,7 @@ export const WeaponsData: Array<Weapon> = [
   },
   // Spear
   {
+    id: WeaponId.LightSpear,
     imageUrl: "",
     name: "Light Spear",
     cost: 200,
@@ -224,6 +239,7 @@ export const WeaponsData: Array<Weapon> = [
     martial: true,
   },
   {
+    id: WeaponId.HeavySpear,
     imageUrl: "",
     name: "Heavy Spear",
     cost: 200,
@@ -240,6 +256,7 @@ export const WeaponsData: Array<Weapon> = [
   },
   // Sword
   {
+    id: WeaponId.BronzeSword,
     imageUrl: "",
     name: "Bronze Sword",
     cost: 200,
@@ -255,6 +272,7 @@ export const WeaponsData: Array<Weapon> = [
     martial: true,
   },
   {
+    id: WeaponId.Greatsword,
     imageUrl: "",
     name: "Greatsword",
     cost: 200,
@@ -270,6 +288,7 @@ export const WeaponsData: Array<Weapon> = [
     martial: true,
   },
   {
+    id: WeaponId.Katana,
     imageUrl: "",
     name: "Katana",
     cost: 200,
@@ -285,6 +304,7 @@ export const WeaponsData: Array<Weapon> = [
     martial: true,
   },
   {
+    id: WeaponId.Rapier,
     imageUrl: "",
     name: "Rapier",
     cost: 200,
@@ -301,6 +321,7 @@ export const WeaponsData: Array<Weapon> = [
   },
   // Thrown Category
   {
+    id: WeaponId.ImprovisedRanged,
     imageUrl: "",
     name: "Improvised (Ranged)",
     cost: 0,
@@ -316,6 +337,7 @@ export const WeaponsData: Array<Weapon> = [
     martial: false,
   },
   {
+    id: WeaponId.Shuriken,
     imageUrl: "",
     name: "Shuriken",
     cost: 150,
