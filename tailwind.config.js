@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'fabula-green': '#2A4A41',
-        'fabula-segment-border': '#79A49A',
+        'fabula-header-green': '#2A4A41',
+        'fabula-segment-green': '#79A49A',
       },
     },
     fontFamily: {
