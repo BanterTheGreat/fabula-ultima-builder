@@ -38,7 +38,7 @@ function GetWeapon(): Weapon {
 
 <template>
 <div class="grid grid-rows-2 grid-cols-7">
-  <div class="row-span-2 bg-white items-center justify-center flex">
+  <div class="row-span-2 bg-white items-center justify-center flex border-fabula-green border-r-2">
     <!-- Image -->
     <!-- We need a method that converts a weapon with a certain Id to the specific filename. -->
     <img id="weapon_image" class="object-fill" src="@/assets/rapier.webp" alt="rapier">
@@ -60,8 +60,16 @@ function GetWeapon(): Weapon {
     {{ FormatDamage(weapon) }}
   </div>
 
-  <div class="col-span-6 items-center justify-center flex font-fabula-header">
-    {{ FormatHands(weapon) }} * {{ FormatRange(weapon) }} * {{ FormatQuality(weapon) }}
+  <div class="col-span-2 items-center justify-center flex font-fabula-header text-sm bg-white border-fabula-green border-t-2">
+    {{ FormatHands(weapon) }}
+  </div>
+
+  <div class="col-span-1 items-center justify-center flex font-fabula-header text-sm bg-white border-fabula-green border-t-2">
+    {{ FormatRange(weapon) }}
+  </div>
+
+  <div class="col-span-3 items-center justify-center flex font-fabula-header text-sm bg-white border-fabula-green border-t-2">
+    {{ FormatQuality(weapon) }}
   </div>
 
 </div>
