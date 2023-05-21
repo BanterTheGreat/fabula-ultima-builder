@@ -32,6 +32,14 @@ export class CharacterState {
         defense: { value: 0, calculatedValue: 0 },
         magicDefense: { value: 0, calculatedValue: 0 },
         initiative: { value: 0, calculatedValue: 0 },
+      },
+      equipment: {
+        equippedArmor: null,
+        equippedOffHand: null,
+        equippedweapon: null,
+        storedWeapons: [],
+        storedArmors: [],
+        storedOffHand: [],
       }
     }
 
