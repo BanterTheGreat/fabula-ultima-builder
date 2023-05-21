@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Character } from '@/models/character';
-import { Attribute } from '@/models/character-data/attribute';
+import { Attribute } from '@/models/character/attribute';
 import { CharacterUpdater } from '@/models/character-updater';
 import { DieSize } from '@/models/die-size';
 import { state } from '@/singletons/state';

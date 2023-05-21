@@ -1,6 +1,7 @@
+import { Emotion } from "@/enums/emotion";
 import type { Character } from "./character";
-import { Attribute } from "./character-data/attribute";
-import { Emotions } from "./character-data/bond";
+import { JsonHelper } from "../helpers/json-helper";
+import { Attribute } from "./character/attribute";
 
 export class CharacterState {
   constructor() {
@@ -22,12 +23,12 @@ export class CharacterState {
         Willpower: new Attribute(),
       },
       bonds: [
-        { name: "", admirationEmotion: Emotions.Admiration, loyaltyEmotion: Emotions.None, affectionEmotion: Emotions.None },
+        { name: "", admirationEmotion: Emotion.Admiration, loyaltyEmotion: Emotion.None, affectionEmotion: Emotion.None },
       ],
       statistics: {
-        healthPoints: { value: 0, calculatedValue: 0, maxValue: 0, calculatedMaxValue: 0 },
-        mindPoints: { value: 0, calculatedValue: 0, maxValue: 0, calculatedMaxValue: 0 },
-        inventoryPoints: { value: 0, calculatedValue: 0, maxValue: 0, calculatedMaxValue: 0 },
+        healthPoints: { value: 0, calculatedValue: 0, currentValue: 0 },
+        mindPoints: { value: 0, calculatedValue: 0,  currentValue: 0 },
+        inventoryPoints: { value: 0, calculatedValue: 0, currentValue: 0 },
         defense: { value: 0, calculatedValue: 0 },
         magicDefense: { value: 0, calculatedValue: 0 },
         initiative: { value: 0, calculatedValue: 0 },
