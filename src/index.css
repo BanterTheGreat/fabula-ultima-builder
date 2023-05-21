@@ -30,6 +30,7 @@ input {
   padding: 0;
   margin: 0;
   border: 1px solid var(--color-fabula-segment-green);
+  border-radius: 0.25rem/* 4px */;
 }
 
 /* The col span classes above 3 in tailwind are broken so I added these manually */
