@@ -5,6 +5,10 @@ import { WeaponId } from "@/enums/weapon-id";
 import { WeaponRange } from "@/enums/weapon-range";
 import type { Weapon } from "@/models/equipment/weapon";
 
+export const WeaponDataRecord: Record<WeaponId, Weapon> = {
+  adw: 
+}
+
 export const WeaponData: Array<Weapon> = [
   // Arcane
   {

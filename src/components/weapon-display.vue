@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { WeaponData } from '@/data/weapon-data';
+import type { Weapon } from '@/models/equipment/weapon';
 import { state } from '@/singletons/state';
+import { WeaponId } from '@/enums/weapon-id';
 
 const props = defineProps<{
   source: "character" | "data",
@@ -8,8 +10,19 @@ const props = defineProps<{
 }>();
 
 if (props.source == "character") {
-  let weaponId = state.character.equipment.equippedweapon?.id
-  let weapon = WeaponData.find(x => x.id == weaponId);
+  let equippedweapon = state.character.equipment.equippedweapon;
+  let weapon: Weapon;
+
+  if (equippedweapon == null) {
+    WeaponData.find(x => x.id == WeaponId.)
+  }
+
+  if (equippedweapon?.homebrew) {
+
+  }
+
+  weapon = WeaponData.find(x => x.id == WeaponId.Unarmed) ?? ;
+  
 }
 
 </script>
