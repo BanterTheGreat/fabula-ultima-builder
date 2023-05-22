@@ -64,6 +64,7 @@ new CharacterCalculator().Recalculate("statistics");
     </div>
     <!-- right side end -->
   </div>
+
 </template>
 
 <style scoped></style>
