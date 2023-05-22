@@ -12,8 +12,8 @@ const props = defineProps({
 })
 
 const traitName = props.traitName as TraitKey
-const colspanLabel = 'col-span-' + props.colspanLabel;
-const colspanInput = 'col-span-' + props.colspanInput;
+const colspanLabel = `col-span-${props.colspanLabel}`;
+const colspanInput = `col-span-${props.colspanInput}`;
 
 let TraitInput: string = state.character.traits[traitName]
 
