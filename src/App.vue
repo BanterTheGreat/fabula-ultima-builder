@@ -57,9 +57,8 @@ new CharacterCalculator().Recalculate("statistics");
       </Segment>
     </div>
     <div class="col-span-6 row-span-4 mx-1">
-      <Segment title="Battle Statistics">
+      <Segment title="Big info panel">
         <SegmentBody>
-          <Statistic />
         </SegmentBody>
       </Segment>
     </div>
