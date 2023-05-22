@@ -6,10 +6,14 @@ import { state } from '@/singletons/state.js'
 type TraitKey = keyof typeof state.character.traits
 
 const props = defineProps({
-  traitName: String
+  traitName: String,
+  colspanLabel: Number,
+  colspanInput: Number,
 })
 
 const traitName = props.traitName as TraitKey
+const colspanLabel = `col-span-${props.colspanLabel}`;
+const colspanInput = `col-span-${props.colspanInput}`;
 
 let TraitInput: string = state.character.traits[traitName]
 
@@ -22,10 +26,10 @@ function updateTrait(event: any) {
 </script>
 
 <template>
-  <div>
-    <label>
-      {{ traitName }}:
-      <input id="trait-identity" v-model="TraitInput" @change="updateTrait" />
-    </label>
+  <div class="text-center font-bold uppercase" :class=colspanLabel>
+    {{ traitName }}
+  </div>
+  <div :class=colspanInput>
+    <input class="w-full" id="trait-identity" v-model="TraitInput" @change="updateTrait" />
   </div>
 </template>

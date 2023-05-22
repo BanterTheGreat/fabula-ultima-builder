@@ -2,20 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-fabula-header-green: #2A4A41;
+    --color-fabula-segment-green: #79A49A;
+  }
+}
+
 .fabula-segment {
-    background: rgb(237, 246, 238);
-    background: -moz-linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
-    background: linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf6ee", endColorstr="#fdfefe", GradientType=1);
+  padding: 1%;
+  background: rgb(237, 246, 238);
+  background: -moz-linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
+  background: linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf6ee", endColorstr="#fdfefe", GradientType=1);
 }
 
 .divider {
-    border-bottom: 1px solid;
-    color: #2A4A41;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: -1px;
+  border-bottom: 1px solid;
+  color: var(--color-fabula-header-green);
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: -1px;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--color-fabula-segment-green);
+  border-radius: 0.25rem/* 4px */;
+}
+
+/* this exists to style the segments in the slots */
+.segment-wrapper > *.fabula-segment {
+  height: 100%;
+}
+
+/* The col span classes above 3 in tailwind are broken so I added these manually */
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+
+.col-span-7 {
+  grid-column: span 7 / span 7;
+}
+
+.col-span-8 {
+  grid-column: span 8 / span 8;
 }
 
 * {
