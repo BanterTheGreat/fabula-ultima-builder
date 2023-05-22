@@ -5,10 +5,9 @@ import { WeaponId } from "@/enums/weapon-id";
 import { WeaponRange } from "@/enums/weapon-range";
 import type { Weapon } from "@/models/equipment/weapon";
 
-export const WeaponData: Array<Weapon> = [
+export const WeaponData: Record<WeaponId, Weapon> = {
   // Arcane
-  {
-    id: WeaponId.Staff,
+  wpn_staff: {
     imageUrl: "",
     name: "Staff",
     cost: 100,
@@ -22,9 +21,8 @@ export const WeaponData: Array<Weapon> = [
     accuracyAttribute2: CharacterAttribute.Willpower,
     quality: "",
     martial: false,
-  },
-  {
-    id: WeaponId.Tome,
+  },  
+  wpn_tome: {
     imageUrl: "",
     name: "Tome",
     cost: 100,
@@ -40,8 +38,7 @@ export const WeaponData: Array<Weapon> = [
     martial: false,
   },
   // Bows
-  {
-    id: WeaponId.Crossbow,
+  wpn_crossbow: {
     imageUrl: "",
     name: "Crossbow",
     cost: 150,
@@ -56,8 +53,7 @@ export const WeaponData: Array<Weapon> = [
     quality: "",
     martial: false,
   },
-  {
-    id: WeaponId.Shortbow,
+  wpn_shortbow: {
     imageUrl: "",
     name: "Shortbow",
     cost: 200,
@@ -73,8 +69,7 @@ export const WeaponData: Array<Weapon> = [
     martial: false,
   },
   // Brawling
-  {
-    id: WeaponId.Unarmed,
+  wpn_unarmed: {
     imageUrl: "",
     name: "Unarmed Strike",
     cost: 0,
@@ -89,8 +84,7 @@ export const WeaponData: Array<Weapon> = [
     quality: "Automatically equipped in each empty hand slot.",
     martial: false,
   },
-  {
-    id: WeaponId.ImprovisedMelee,
+  wpn_improv_melee: {
     imageUrl: "",
     name: "Improvised (Melee)",
     cost: 0,
@@ -105,8 +99,7 @@ export const WeaponData: Array<Weapon> = [
     quality: "Breaks after the attack",
     martial: false,
   },
-  {
-    id: WeaponId.IronKnuckle,
+  wpn_knuckle: {
     imageUrl: "",
     name: "Iron Knuckle",
     cost: 150,
@@ -122,8 +115,7 @@ export const WeaponData: Array<Weapon> = [
     martial: false,
   },
   // Dagger
-  {
-    id: WeaponId.Dagger,
+  wpn_dagger: {
     imageUrl: "",
     name: "Dagger",
     cost: 150,
@@ -139,8 +131,7 @@ export const WeaponData: Array<Weapon> = [
     martial: false,
   },
   // Pistol
-  {
-    id: WeaponId.Pistol,
+  wpn_pistol: {
     imageUrl: "",
     name: "Pistol",
     cost: 250,
@@ -156,8 +147,7 @@ export const WeaponData: Array<Weapon> = [
     martial: true,
   },
   // Flail
-  {
-    id: WeaponId.ChainWhip,
+  wpn_whip: {
     imageUrl: "",
     name: "Chain Whip",
     cost: 150,
@@ -173,8 +163,7 @@ export const WeaponData: Array<Weapon> = [
     martial: false,
   },
   // Heavy Category
-  {
-    id: WeaponId.IronHammer,
+  wpn_hammer: {
     imageUrl: "",
     name: "Iron Hammer",
     cost: 200,
@@ -189,8 +178,7 @@ export const WeaponData: Array<Weapon> = [
     quality: "",
     martial: false,
   },
-  {
-    id: WeaponId.BroadAxe,
+  wpn_broadaxe: {
     imageUrl: "",
     name: "Broadaxe",
     cost: 250,
@@ -205,8 +193,7 @@ export const WeaponData: Array<Weapon> = [
     quality: "",
     martial: true,
   },
-  {
-    id: WeaponId.WarAxe,
+  wpn_waraxe: {
     imageUrl: "",
     name: "Waraxe",
     cost: 250,
@@ -222,8 +209,7 @@ export const WeaponData: Array<Weapon> = [
     martial: true,
   },
   // Spear
-  {
-    id: WeaponId.LightSpear,
+  wpn_lightspear: {
     imageUrl: "",
     name: "Light Spear",
     cost: 200,
@@ -238,8 +224,7 @@ export const WeaponData: Array<Weapon> = [
     quality: "",
     martial: true,
   },
-  {
-    id: WeaponId.HeavySpear,
+  wpn_heavyspear: {
     imageUrl: "",
     name: "Heavy Spear",
     cost: 200,
@@ -255,8 +240,7 @@ export const WeaponData: Array<Weapon> = [
     martial: true,
   },
   // Sword
-  {
-    id: WeaponId.BronzeSword,
+  wpn_sword: {
     imageUrl: "",
     name: "Bronze Sword",
     cost: 200,
@@ -271,8 +255,7 @@ export const WeaponData: Array<Weapon> = [
     quality: "",
     martial: true,
   },
-  {
-    id: WeaponId.Greatsword,
+  wpn_greatsword: {
     imageUrl: "",
     name: "Greatsword",
     cost: 200,
@@ -287,8 +270,7 @@ export const WeaponData: Array<Weapon> = [
     quality: "",
     martial: true,
   },
-  {
-    id: WeaponId.Katana,
+  wpn_katana: {
     imageUrl: "",
     name: "Katana",
     cost: 200,
@@ -303,8 +285,7 @@ export const WeaponData: Array<Weapon> = [
     quality: "",
     martial: true,
   },
-  {
-    id: WeaponId.Rapier,
+  wpn_rapier: {
     imageUrl: "",
     name: "Rapier",
     cost: 200,
@@ -320,8 +301,7 @@ export const WeaponData: Array<Weapon> = [
     martial: true,
   },
   // Thrown Category
-  {
-    id: WeaponId.ImprovisedRanged,
+  wpn_improv_ranged: {
     imageUrl: "",
     name: "Improvised (Ranged)",
     cost: 0,
@@ -336,8 +316,7 @@ export const WeaponData: Array<Weapon> = [
     quality: "Breaks after the attack.",
     martial: false,
   },
-  {
-    id: WeaponId.Shuriken,
+  wpn_shuriken: {
     imageUrl: "",
     name: "Shuriken",
     cost: 150,
@@ -352,4 +331,4 @@ export const WeaponData: Array<Weapon> = [
     quality: "",
     martial: false,
   }
-]
+}

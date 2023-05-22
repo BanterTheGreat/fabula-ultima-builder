@@ -5,6 +5,7 @@
   import Segment from './views/segment.vue';
   import Statistic from './views/statistics.vue';
   import { CharacterCalculator } from './models/character-calculator';
+import WeaponDisplay from './components/weapon-display.vue';
 
   // Initial Calculating of values.
   new CharacterCalculator().Recalculate("statistics");
@@ -27,6 +28,12 @@
       <SegmentBody>
         <Statistic />
       </SegmentBody>
+  </Segment>
+
+  <Segment title="Equipped Items">
+    <SegmentBody>
+      <WeaponDisplay source="character" hand="main"/>
+    </SegmentBody>
   </Segment>
 </template>
 
