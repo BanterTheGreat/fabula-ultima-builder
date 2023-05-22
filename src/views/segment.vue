@@ -8,8 +8,10 @@ const props = defineProps({
 </script>
 
 <template>
-    <div>
+    <div class="min-h-0 h-full">
         <SegmentHeader v-bind:segmentHeader="props.title" />
-        <slot></slot>
+        <div class="h-3/4 p-1 segment-wrapper">
+            <slot></slot>
+        </div>
     </div>
 </template>

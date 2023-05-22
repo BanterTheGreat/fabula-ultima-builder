@@ -16,7 +16,7 @@ new CharacterCalculator().Recalculate("statistics");
 </script>
 
 <template>
-  <div class=" grid grid-cols-8 grid-rows-6 grid-flow-col">
+  <div class=" grid grid-cols-8 grid-rows-6 grid-flow-col auto-rows-auto">
     <!-- left side start -->
     <div class="col-span-2 row-span-1 mx-1">
       <Segment title="Personal info">
