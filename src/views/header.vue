@@ -12,7 +12,7 @@ function openSwitchCharacterModal() {
 </script>
 
 <template>
-<header class="bg-white border-fabula-header-green border-b-2 ">
+<header class="bg-fabula-header-green text-white">
   <nav class="x py-3 p-5">
     <div class="flex flex-row">
       <div class="font-center">
