@@ -8,9 +8,9 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="min-h-0 h-full">
-        <SegmentHeader v-bind:segmentHeader="props.title" />
-        <div class="h-3/4 p-1 segment-wrapper">
+    <div class="min-h-0 h-full p-3">
+        <div class="h-full p-1 segment-wrapper">
+            <SegmentHeader v-bind:segmentHeader="props.title" />
             <slot></slot>
         </div>
     </div>
