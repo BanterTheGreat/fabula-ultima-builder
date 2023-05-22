@@ -3,6 +3,7 @@ import { CharacterCalculator } from './models/character-calculator';
 
 import SegmentBody from './components/segment-body.vue';
 
+import HeaderVue from './views/header.vue';
 import attributesVue from './views/attribute/attributes.vue';
 import Bonds from './views/bonds.vue';
 import Segment from './views/segment.vue';
@@ -16,6 +17,10 @@ new CharacterCalculator().Recalculate("statistics");
 </script>
 
 <template>
+  
+  <!-- Header -->
+  <HeaderVue />
+  <!-- Grid. -->
   <div class=" grid grid-cols-8 grid-rows-6 grid-flow-col auto-rows-auto">
     <!-- left side start -->
     <div class="col-span-2 row-span-1 mx-1">
