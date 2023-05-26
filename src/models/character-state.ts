@@ -5,6 +5,7 @@ import { Attribute } from "./character/attribute";
 
 export class CharacterState {
   constructor() {
+    new JsonHelper().PrintFabulaDataToConsoleAsJson();
     // We should load the character from cookies here.
     var tempCharacter: Character = {
       id: crypto.randomUUID(),

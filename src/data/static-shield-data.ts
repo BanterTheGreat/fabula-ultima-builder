@@ -1,7 +1,7 @@
 import type { Shield } from "@/models/equipment/shield";
 import { ShieldId } from "@/enums/shield-id";
 
-export const ShieldData: Array<Shield> = [
+export const StaticShieldData: Array<Shield> = [
   {
     id: ShieldId.BronzeShield,
     imageUrl: "",

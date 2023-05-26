@@ -3,7 +3,7 @@ import { ArmorId } from "@/enums/armor-id";
 import { CharacterAttribute } from "@/enums/character-attribute";
 import type { Armor } from "@/models/equipment/armor";
 
-export const ArmorData: Array<Armor> = [
+export const StaticArmorData: Array<Armor> = [
   {
     id: ArmorId.NoArmor,
     imageUrl: "",

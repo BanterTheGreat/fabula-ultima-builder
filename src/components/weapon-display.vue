@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { WeaponData } from '@/data/weapon-data';
+import { StaticWeaponData } from '@/data/static-weapon-data';
 import type { Weapon } from '@/models/equipment/weapon';
 import { state } from '@/singletons/state';
 import { WeaponId } from '@/enums/weapon-id';
