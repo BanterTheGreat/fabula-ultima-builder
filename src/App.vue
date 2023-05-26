@@ -8,6 +8,7 @@ import Bonds from './views/bonds.vue';
 import Segment from './views/segment.vue';
 import Statistic from './views/statistics.vue';
 import TraitInfo from './views/traits/trait-info.vue';
+import textWithBoldVue from './views/text-with-bold.vue';
 
 
 
@@ -59,6 +60,7 @@ new CharacterCalculator().Recalculate("statistics");
     <div class="col-span-6 row-span-4 mx-1">
       <Segment title="Big info panel">
         <SegmentBody>
+          <textWithBoldVue text="You weave magical energy and protect the targets from the fury of the elements. \n Choose a damage type: __air__, __bolt__, __earth__, __fire__, __water__ or __ice__. Until this spell ends, each target gains Resistance against the chosen damage type." />
         </SegmentBody>
       </Segment>
     </div>
