@@ -9,8 +9,6 @@ import Segment from './views/segment.vue';
 import Statistic from './views/statistics.vue';
 import TraitInfo from './views/traits/trait-info.vue';
 
-
-
 // Initial Calculating of values.
 new CharacterCalculator().Recalculate("statistics");
 </script>

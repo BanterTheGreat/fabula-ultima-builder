@@ -3,8 +3,8 @@ import { ArmorId } from "@/enums/armor-id";
 import { CharacterAttribute } from "@/enums/character-attribute";
 import type { Armor } from "@/models/equipment/armor";
 
-export const StaticArmorData: Array<Armor> = [
-  {
+export const StaticArmorData: Record<ArmorId | string, Armor> = {
+  amr_none: {
     id: ArmorId.NoArmor,
     imageUrl: "",
     name: "No Armor",
@@ -15,7 +15,8 @@ export const StaticArmorData: Array<Armor> = [
     quality: "",
     martial: false,
   },
-  {
+
+  amr_silk: {
     id: ArmorId.SilkShirt,
     imageUrl: "",
     name: "Silk Shirt",
@@ -26,7 +27,8 @@ export const StaticArmorData: Array<Armor> = [
     quality: "",
     martial: false,
   },
-  {
+
+  amr_garb: {
     id: ArmorId.TravelGarb,
     imageUrl: "",
     name: "Travel Garb",
@@ -37,29 +39,32 @@ export const StaticArmorData: Array<Armor> = [
     quality: "",
     martial: false,
   },
-  {
-    id: ArmorId.CombatTunic,
-    imageUrl: "",
-    name: "Combat Tunic",
-    cost: 150,
-    defense: { type: ArmorDefenseType.Attribute, attribute: CharacterAttribute.Dexterity, bonus: 1 },
-    magicDefense: { type: ArmorDefenseType.Attribute, attribute: CharacterAttribute.Insight, bonus: 1 },
-    initiativePenalty: 0,
-    quality: "",
-    martial: false,
+
+  amr_tunic: {
+      id: ArmorId.CombatTunic,
+      imageUrl: "",
+      name: "Combat Tunic",
+      cost: 150,
+      defense: { type: ArmorDefenseType.Attribute, attribute: CharacterAttribute.Dexterity, bonus: 1 },
+      magicDefense: { type: ArmorDefenseType.Attribute, attribute: CharacterAttribute.Insight, bonus: 1 },
+      initiativePenalty: 0,
+      quality: "",
+      martial: false,
   },
-  {
-    id: ArmorId.SageRobe,
-    imageUrl: "",
-    name: "Sage Robe",
-    cost: 200,
-    defense: { type: ArmorDefenseType.Attribute, attribute: CharacterAttribute.Dexterity, bonus: 1 },
-    magicDefense: { type: ArmorDefenseType.Attribute, attribute: CharacterAttribute.Insight, bonus: 2 },
-    initiativePenalty: 2,
-    quality: "",
-    martial: false,
+
+  amr_robe: {
+      id: ArmorId.SageRobe,
+      imageUrl: "",
+      name: "Sage Robe",
+      cost: 200,
+      defense: { type: ArmorDefenseType.Attribute, attribute: CharacterAttribute.Dexterity, bonus: 1 },
+      magicDefense: { type: ArmorDefenseType.Attribute, attribute: CharacterAttribute.Insight, bonus: 2 },
+      initiativePenalty: 2,
+      quality: "",
+      martial: false,
   },
-  {
+
+  amr_brigandine: {
     id: ArmorId.Brigandine,
     imageUrl: "",
     name: "Brigandine",
@@ -70,7 +75,8 @@ export const StaticArmorData: Array<Armor> = [
     quality: "",
     martial: true,
   },
-  {
+
+  amr_bronze_plate: {
     id: ArmorId.BronzePlate,
     imageUrl: "",
     name: "Bronze Plate",
@@ -81,7 +87,8 @@ export const StaticArmorData: Array<Armor> = [
     quality: "",
     martial: true,
   },
-  {
+
+  amr_runic_plate:  {
     id: ArmorId.RunicPlate,
     imageUrl: "",
     name: "Runic Plate",
@@ -92,7 +99,8 @@ export const StaticArmorData: Array<Armor> = [
     quality: "",
     martial: true,
   },
-  {
+
+  amr_steel_plate:  {
     id: ArmorId.SteelPlate,
     imageUrl: "",
     name: "Steel Plate",
@@ -103,4 +111,4 @@ export const StaticArmorData: Array<Armor> = [
     quality: "",
     martial: true,
   },
-]
+};

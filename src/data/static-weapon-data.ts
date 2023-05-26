@@ -5,7 +5,7 @@ import { WeaponId } from "@/enums/weapon-id";
 import { WeaponRange } from "@/enums/weapon-range";
 import type { Weapon } from "@/models/equipment/weapon";
 
-export const StaticWeaponData: Record<WeaponId, Weapon> = {
+export const StaticWeaponData: Record<WeaponId | string, Weapon> = {
   // Arcane
   wpn_staff: {
     imageUrl: "",
