@@ -10,6 +10,7 @@ import Segment from './views/segment.vue';
 import Statistic from './views/statistics.vue';
 import TraitInfo from './views/traits/trait-info.vue';
 import textWithBoldVue from './views/text-with-bold.vue';
+import characterBuilderVue from './views/character-builder.vue';
 
 // Initial Calculating of values.
 new CharacterCalculator().Recalculate("statistics");
@@ -19,8 +20,11 @@ new CharacterCalculator().Recalculate("statistics");
   
   <!-- Header -->
   <HeaderVue />
+
+  <characterBuilderVue />
+
   <!-- Grid. -->
-  <div class=" grid grid-cols-8 grid-rows-6 grid-flow-col auto-rows-auto">
+  <div class="grid grid-cols-8 grid-rows-6 grid-flow-col auto-rows-auto test">
     <!-- left side start -->
     <div class="col-span-2 row-span-1 mx-1">
       <Segment title="Personal info">
@@ -72,4 +76,8 @@ new CharacterCalculator().Recalculate("statistics");
 
 </template>
 
-<style scoped></style>
+<style scoped>
+.test {
+  margin-left: 22rem;
+}
+</style>
