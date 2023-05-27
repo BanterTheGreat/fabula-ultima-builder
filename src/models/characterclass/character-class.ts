@@ -1,4 +1,5 @@
 import { ClassId } from "@/enums/class-id"
+import { ClassSkillId } from "@/enums/class-skill-id"
 import type { ClassSkill } from "./class-skill"
 
 export interface CharacterClass<TClassId extends (ClassId | string)> {
@@ -10,6 +11,6 @@ export interface CharacterClass<TClassId extends (ClassId | string)> {
     }
     equipment: Array<"martialMelee" | "martialRanged" | "martialArmor" | "martialShield" | "dualShield">
   },
-  skills: Record<string, ClassSkill>,
+  skills: Record<(string|ClassSkillId), ClassSkill>,
   views?: Array<{ NavHeader: string, RouterView: string }>,
 };
