@@ -11,6 +11,6 @@ export interface CharacterClass<TClassId extends (ClassId | string)> {
     }
     equipment: Array<"martialMelee" | "martialRanged" | "martialArmor" | "martialShield" | "dualShield">
   },
-  skills: Record<(string|ClassSkillId), ClassSkill>,
+  skills: Record<(ClassSkillId | string), ClassSkill>,
   views?: Array<{ NavHeader: string, RouterView: string }>,
 };

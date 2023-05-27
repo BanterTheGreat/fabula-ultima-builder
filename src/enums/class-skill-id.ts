@@ -1,4 +1,4 @@
-export enum SkillId {
+export enum ClassSkillId {
 
     //Arcanist
     BindAndSummon = "skl_bindandsummon",
