@@ -4,7 +4,6 @@ import type { WeaponId } from "@/enums/weapon-id";
 import type { Equipment } from "./equipment";
 
 export interface CharacterEquipment {
-  // We might want to support custom entries in the future. As such, I keep the door open for custom types.
   equippedweapon: Equipment<WeaponId> | null,
   equippedOffHand: Equipment<WeaponId> | Equipment<ShieldId> | null,
   equippedArmor: Equipment<ArmorId> | null,

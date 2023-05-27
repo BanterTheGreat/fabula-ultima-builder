@@ -11,5 +11,5 @@ export enum SpellId {
   Terra = "spl_terra",
   Thunderbolt = "spl_thunderbolt",
   Ventus = "spl_ventus",
-  Vortedx = "spl_vortex",
+  Vortex = "spl_vortex",
 }
