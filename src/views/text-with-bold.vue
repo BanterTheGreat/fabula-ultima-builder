@@ -12,6 +12,12 @@ function getTextParts(): { text?: string, bold: boolean, newLine: boolean }[] {
 
   var input: string = props.text;
 
+  const amountOfBoldTagsIsEven = (input.match(/__/g) || []).length % 2 == 0;
+
+  if (!amountOfBoldTagsIsEven) {
+    return [{ text: input, bold: false, newLine: false }]
+  }
+
   const result: Array<{
     text?: string,
     bold: boolean,
