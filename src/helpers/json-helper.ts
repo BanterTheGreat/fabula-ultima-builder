@@ -1,11 +1,16 @@
-import { ArmorData } from "@/data/armor-data";
-import { ShieldData } from "@/data/shield-data";
-import { WeaponData } from "@/data/weapon-data";
+import { StaticArmorData } from "@/data/static-armor-data";
+import { StaticShieldData } from "@/data/static-shield-data";
+import { StaticWeaponData } from "@/data/static-weapon-data";
 
 export class JsonHelper {
-  public ExportFabulaDataToJson() {
-    console.log(JSON.stringify(WeaponData));
-    console.log(JSON.stringify(ArmorData));
-    console.log(JSON.stringify(ShieldData));
+  public PrintFabulaDataToConsoleAsJson() {
+    console.log("ARMOR DATA");
+    console.log(JSON.stringify(StaticArmorData));
+
+    console.log("SHIELD DATA");
+    console.log(JSON.stringify(StaticShieldData));
+
+    console.log("WEAPON DATA");
+    console.log(JSON.stringify(StaticWeaponData));
   }
 }

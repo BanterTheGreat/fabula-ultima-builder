@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { WeaponData } from '@/data/weapon-data';
 import type { Weapon } from '@/models/equipment/weapon';
 import { state } from '@/singletons/state';
 import { WeaponId } from '@/enums/weapon-id';
 import { computed, type ComputedRef } from '@vue/reactivity';
 import { FormatAccuracy, FormatCost, FormatDamage, FormatHands, FormatQuality, FormatRange } from '@/helpers/weapon-formatter';
+import { EquipmentData } from '@/data/data';
 
 const props = defineProps<{
   source: "character" | "data",
@@ -20,18 +20,18 @@ function GetWeapon(): Weapon {
     let equippedweapon = state.character.equipment.equippedweapon;
 
     if (equippedweapon == null) {
-      return WeaponData[WeaponId.Unarmed];
+      return EquipmentData.weapons[WeaponId.Unarmed];
     }
 
     if (equippedweapon?.homebrew) {
       // Grab it from the homebrew section instead.
     }
 
-    return WeaponData[equippedweapon.id];
+    return EquipmentData.weapons[equippedweapon.id];
   }
 
   // If this returns unarmed, it means we wanted to grab from the data but without an ID to grab it with.
-  return WeaponData[props.id ?? WeaponId.Unarmed];
+  return EquipmentData.weapons[props.id ?? WeaponId.Unarmed];
 }
 
 </script>

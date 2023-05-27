@@ -1,8 +1,8 @@
 import type { Shield } from "@/models/equipment/shield";
 import { ShieldId } from "@/enums/shield-id";
 
-export const ShieldData: Array<Shield> = [
-  {
+export const StaticShieldData: Record<ShieldId | string, Shield> = {
+  shd_bronze: {
     id: ShieldId.BronzeShield,
     imageUrl: "",
     name: "Bronze Shield",
@@ -13,6 +13,8 @@ export const ShieldData: Array<Shield> = [
     quality: "",
     martial: false,
   },
+
+  shd_steel: 
   {
     id: ShieldId.SteelShield,
     imageUrl: "",
@@ -23,5 +25,5 @@ export const ShieldData: Array<Shield> = [
     initiativeBonus: 0,
     quality: "",
     martial: true,
-  }
-]
+  },
+}
