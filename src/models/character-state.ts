@@ -9,7 +9,7 @@ export class CharacterState {
     var tempCharacter: Character = {
       id: crypto.randomUUID(),
       general: { 
-        name: "john", pronouns: "him", experience: 1, fabulaPoints: 1, level: 1, zenit: 300 
+        name: "John", pronouns: "him", experience: 1, fabulaPoints: 1, level: 1, zenit: 300 
       }, 
       traits: {
         identity: "Unknown",
