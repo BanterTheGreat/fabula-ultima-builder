@@ -82,4 +82,44 @@ export const StaticSpellData: Record<SpellId, Spell> = {
     duration: "instantaneous",
     description: "The wind carries your strikes across the battlefield. You may immediately perform a __free attack__ with a __melee__ weapon you have equipped. This attack may target creatures that can only be targeted by ranged attacks. If you used a weapon belonging to the __brawling__ or __spear__ Category for this attack, it deals 5 extra damage. If you hit a flying target with this attack, you may force them to land immediately."
   },
+
+  spl_terra: {
+    type: SpellType.Elementalist,
+    name: "Terra",
+    mind: 10,
+    targets: 3,
+    offensive: true,
+    duration: "instantaneous",
+    description: "Spires of jagged rock erupt from the ground beneath your foes, closing around them. Each target hit by this spell suffers __【 HR + 15 】 earth__ damage, and if you spend an __Opportunity__ also performs one fewer action on their next turn (to a minimum of 0 actions). This spell cannot target creatures who are flying, floating, falling, or otherwise in mid-air."
+  },
+
+  spl_thunderbolt: {
+    type: SpellType.Elementalist,
+    name: "Thunderbolt",
+    mind: 20,
+    targets: 1,
+    offensive: true,
+    duration: "instantaneous",
+    description: "You send lightning striking at your foe. The target suffers __【 HR + 25 】 bolt__ damage. Damage dealt by this spell ignores Resistances."
+  },
+
+  spl_ventus: {
+    type: SpellType.Elementalist,
+    name: "Ventus",
+    mind: 10,
+    targets: 3,
+    offensive: true,
+    duration: "instantaneous",
+    description: "You summon the power of winds against your enemy. Each target hit by this spell suffers __【 HR + 15 】air__ damage, and if you spend an __Opportunity__ all __flying__ targets are forced to land immediately."
+  },
+
+  spl_vortex: {
+    type: SpellType.Elementalist,
+    name: "Vortex",
+    mind: 10,
+    targets: "Self",
+    offensive: false,
+    duration: "scene",
+    description: "A roaring gale surrounds you, blowing away arrows and bullets. Until this spell ends, you gain a +2 bonus to your Defense against ranged attacks."
+  },
 };
