@@ -40,7 +40,8 @@ export class CharacterState {
         storedWeapons: [],
         storedArmors: [],
         storedOffHand: [],
-      }
+      },
+      classes: []
     }
 
     this._character = tempCharacter;
