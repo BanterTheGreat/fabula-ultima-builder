@@ -22,8 +22,20 @@ const InitialSkills = computed(() => characterChoices.choices.filter(x => x.choi
 
 <template>
   <SegmentBody>
-    <div v-for="choice in characterChoices.choices">
-      Test;
+    <div v-for="choice in InitialAttribute">
+      InitialAttribute
+    </div>
+
+    <div v-for="choice in AttributeUpgrades">
+      AttributeUpgrade
+    </div>
+
+    <div v-for="choice in Skill">
+      Skill
+    </div>
+
+    <div v-for="choice in InitialSkills">
+      InitialSkills
     </div>
   </SegmentBody>
 </template>
