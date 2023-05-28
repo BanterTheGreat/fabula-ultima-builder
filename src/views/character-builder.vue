@@ -23,4 +23,5 @@ import { state } from '@/singletons/state';
     top: 3rem;
     bottom: 0;
 }
+
 </style>
