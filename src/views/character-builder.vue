@@ -8,7 +8,7 @@ import { state } from '@/singletons/state';
       <div class="text-center mx-5">
         <div v-for="(value, key, index) in state.character.progression" class="my-5">
           <div> Level {{ key }}</div>
-          <ChoiceDisplay v-bind:choices="value" />
+          <ChoiceDisplay v-bind:choices="value" v-bind:choice-level="key" v-bind:character-level="state.character.general.level" />
         </div>
       </div>
     </div>

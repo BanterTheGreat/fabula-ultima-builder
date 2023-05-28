@@ -6,7 +6,7 @@ export interface InitialSkills {
   skills: Array<string>,
 }
 
-export class InitialClassChoice implements Choice {
+export class InitialSkillChoice implements Choice {
   type = ChoiceType.InitialSkills
   class1: InitialSkills = { skills: [] }
   class2: InitialSkills = { skills: [] }
