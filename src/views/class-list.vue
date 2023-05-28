@@ -2,6 +2,8 @@
 import ClassSelect from '@/components/class-select.vue';
 import ClassJson from '@/data/json/class.json';
 
+
+
 let ClassIds = Object.keys(ClassJson.Classes);
 let ClassList: Record<string, string> = {};
 

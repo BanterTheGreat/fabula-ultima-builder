@@ -40,7 +40,53 @@ export class CharacterState {
         storedWeapons: [],
         storedArmors: [],
         storedOffHand: [],
-      }
+      },
+      classes: [
+        {
+            id: "Class_arcanist",
+            name: "Arcanist",
+            passives: {
+                modifiers: {
+                    stat: "mind",
+                    boost: 5
+                },
+                proficiency: []
+            },
+            skills: {
+                skl_bindandsummon: {
+                    name: "Bind and summon",
+                    proficiency: 0,
+                    maxProficiency: 0,
+                },
+                skl_ritualarcanism: {
+                    name: "Ritual arcanism",
+                    proficiency: 0,
+                    maxProficiency: 0,
+                },
+                skl_arcaneregeneration: {
+                    name: "Arcane regeneration",
+                    proficiency: 0,
+                    maxProficiency: 2,
+                },
+                sk_arcanecircle: {
+                    name: "Arcane circle",
+                    proficiency: 0,
+                    maxProficiency: 4,
+                },
+                skl_emergencyarcanum: {
+                    name: "Emergency arcanum",
+                    proficiency: 0,
+                    maxProficiency: 6,
+                }
+            },
+            views: [
+                {
+                  NavHeader: "The arcana",
+                  RouterView: "the-arcana"
+                }
+            ]
+        }
+      ]
     }
 
     this._character = tempCharacter;

@@ -11,8 +11,8 @@ export interface CharacterClass {
       stat: "health" | "mind" | "inventory" | "meleeAccuracy" | "rangedAccuracy" | "defense" | "magicDefense" | "initiative" | "meleeDamage" | "rangedDamage" | "spellDamage" | "spellAccuracy",
       boost: number,
     }
-    equipment?: Array<"martialMelee" | "martialRanged" | "martialArmor" | "martialShield" | "dualShield">
+    proficiency?: Array<"martialMelee" | "martialRanged" | "martialArmor" | "martialShield" | "dualShield">
   },
-  skills: Record<(ClassSkillId | string), ClassSkill>,
+  skills?: Record<string, ClassSkill>,
   views?: Array<ClassView>,
 };
