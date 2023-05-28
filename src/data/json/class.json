@@ -1,10 +1,10 @@
 {
     "Classes": {
-        "Arcanist": {
+        "Class_arcanist": {
             "Name": "Arcanist",
             "Benefits": {
                 "StatBoost": {
-                    "Stat": "MP",
+                    "Stat": "mind",
                     "Boost": 5
                 },
                 "proficiency": []

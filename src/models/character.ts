@@ -15,5 +15,5 @@ export interface Character {
   attributes: CharacterAttributes,
   bonds: Array<Bond>,
   equipment: CharacterEquipment,
-  classes: Array<CharacterClass<ClassId | string>>
+  classes: Array<CharacterClass>
 }
