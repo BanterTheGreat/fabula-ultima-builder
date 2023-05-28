@@ -12,12 +12,17 @@ import TraitInfo from './views/traits/trait-info.vue';
 import textWithBoldVue from './views/text-with-bold.vue';
 import characterBuilderVue from './views/character-builder.vue';
 
+import { ModalsContainer } from 'vue-final-modal';
+
 // Initial Calculating of values.
 new CharacterCalculator().Recalculate("statistics");
 </script>
 
 <template>
   
+  <!-- Support Modals -->
+  <ModalsContainer />
+
   <!-- Header -->
   <HeaderVue />
 
