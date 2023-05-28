@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import SegmentBody from '@/components/segment-body.vue';
 import ChoiceDisplay from '@/components/choice-display.vue';
 import { state } from '@/singletons/state';
 </script>
@@ -7,10 +6,9 @@ import { state } from '@/singletons/state';
 <template>
     <div id="sidebar">
       <div class="text-center pt-2 mx-2">
-        <div v-for="choice in state.character.progression" class="my-5">
-            <SegmentBody>
-              <ChoiceDisplay />
-            </SegmentBody>
+        <div v-for="(value, key, index) in state.character.progression" class="my-5">
+          <div> Level {{ key }}</div>
+          <ChoiceDisplay v-bind:choices="value" />
         </div>
       </div>
     </div>

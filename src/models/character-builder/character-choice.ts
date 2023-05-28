@@ -1,13 +1,9 @@
-import type { ICharacterChoice } from "./character-choice-interface";
-import type { Choice } from "./choice";
+import type { Choices } from "@/types/choices";
 
-export class CharacterChoice<T extends Choice> implements ICharacterChoice {
-  /**
-   *
-   */
-  constructor(choice: T) {
+export class CharacterChoice {
+  constructor(choice: Choices) {
     this.choice = choice;
   }
 
-  public choice: T;
+  public choice: Choices;
 }
