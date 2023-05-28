@@ -4,7 +4,7 @@ import SegmentBody from './segment-body.vue';
 import { ChoiceType } from '@/enums/choice-type';
 import { useModal } from 'vue-final-modal';
 
-import ModalTest from '@/views/modals/attribute-modal.vue';
+import AttributeModal from '@/views/modals/attribute-modal.vue';
 
 import { CharacterBuilderButtonHelper } from '@/helpers/character-builder-button-helper';
 
@@ -50,7 +50,8 @@ import type { InitialAttributeChoice } from '@/models/character-builder/initial-
 
   function openModal() {
     const { open, close } = useModal({
-        component: ModalTest,
+        // Eventually, this will decide what modal to open depending on the button. But we only have 1 type for now :(
+        component: AttributeModal,
         attrs: {
           choice: props.characterChoice.choice as any,
         },
