@@ -39,14 +39,13 @@ function updateClass(event: any) {
     };
 
     for (let skill in classList[selectedClassId]["Skills"]) {
-        let skillObject: Record<string, ClassSkill> = {
-            [skill]: {
+        if (selectedClass.skills !== undefined) {
+            selectedClass.skills.skill = {
                 name: classList[selectedClassId]["Skills"][skill]["Name"],
                 proficiency: 0,
                 maxProficiency: classList[selectedClassId]["Skills"][skill]["MaxProficiency"]
             }
         }
-        Object.assign(selectedClass.skills, skillObject);
     }
 
     new CharacterUpdater()
