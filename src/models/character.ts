@@ -4,6 +4,9 @@ import type { CharacterAttributes } from "./character/character-attributes";
 import type Bond from "./character/bond";
 import type { Statistics } from "./character/statistics";
 import type { CharacterEquipment } from "./character/character-equipment";
+import type { CharacterChoice } from "./character-builder/character-choice";
+import type { Choice } from "./character-builder/choice";
+import type { ICharacterChoice } from "./character-builder/character-choice-interface";
 
 export interface Character {
   id: string,
@@ -13,4 +16,5 @@ export interface Character {
   attributes: CharacterAttributes,
   bonds: Array<Bond>,
   equipment: CharacterEquipment,
+  progression: Record<number, Array<ICharacterChoice>>
 }

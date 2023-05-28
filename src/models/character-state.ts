@@ -2,6 +2,7 @@ import { Emotion } from "@/enums/emotion";
 import type { Character } from "./character";
 import { JsonHelper } from "../helpers/json-helper";
 import { Attribute } from "./character/attribute";
+import { InitialiseChoices } from "@/helpers/choice-builder";
 
 export class CharacterState {
   constructor() {
@@ -40,10 +41,13 @@ export class CharacterState {
         storedWeapons: [],
         storedArmors: [],
         storedOffHand: [],
-      }
+      },
+      progression: InitialiseChoices(),
     }
 
     this._character = tempCharacter;
+
+    console.log(this._character);
   }
 
   private _character: Character;

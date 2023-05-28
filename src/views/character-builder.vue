@@ -1,9 +1,16 @@
 <script setup lang="ts">
+import SegmentBody from '@/components/segment-body.vue';
+import { state } from '@/singletons/state';
 </script>
 
 <template>
     <div id="sidebar">
-      <div class="text-center pt-2">
+      <div class="text-center pt-2 mx-2">
+        <div v-for="choice in state.character.progression" class="my-5">
+            <SegmentBody>
+              Choice!
+            </SegmentBody>
+        </div>
       </div>
     </div>
 </template>
