@@ -84,4 +84,11 @@ export enum ClassSkillId {
     HealingPower = "skl_healingpower",
     SpiritualMagic = "skl_spiritualmagic",
 
+    //Tinkerer
+    EmergencyItem = "skl_emergencyitem",
+    PotionRain = "skl_potionrain",
+    Gadgets = "skl_gadgets",
+    SecretFormula = "skl_secretformula",
+    Visionary = "skl_visionary",
+
 }

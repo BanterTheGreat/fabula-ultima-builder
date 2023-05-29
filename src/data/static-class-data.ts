@@ -470,5 +470,48 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
             }
         },
         views: []
+    },
+    class_tinkerer: {
+        name: "Tinkerer",
+        passives: {
+            modifier: {
+                stat: Modifier.Inventory,
+                boost: 2
+            },
+            proficiency: []
+        },
+        skills: {
+            skl_emergencyitem: {
+                name: "Emergency item",
+                maxInvestment: 0,
+                description: "Once per conflict scene, if you are in __Crisis__, you may perform an additional action on your turn. This action __must__ be the __Inventory__ action."
+            },
+            skl_potionrain: {
+                name: "Potion rain",
+                maxInvestment: 2,
+                description: "When you create a __potion__ that restores a __single__ creature's HP and/or MP, you may have it affect up to __【SL】__ additional creatures. If you do, the potion only restores half the normal amount of HP and MP to each creature."
+            },
+            skl_gadgets: {
+                name: "Gadgets",
+                maxInvestment: 5,
+                description: "When you first acquire this Skill, choose a gadget type: __alchemy__, __infusions__ or __magitech__ (see next four pages). You gain its __basic benefits__. \n Whenever you take this Skill again, choose one option: you gain the __basic benefits__ of a new gadget type; __or__ you gain the __advanced benefits__ of a gadget type whose __basic benefits__ you already obtained; __or__ you gain the __superior benefits__ of a gadget type whose __advanced benefits__ you already obtained."
+            },
+            skl_secretformula: {
+                name: "Secret formula",
+                maxInvestment: 5,
+                description: "When you create a __potion__ or __magisphere__ whose effects restore HP and/or MP, each restored amount is increased by __【SL × 5】__. When you create an __elemental shard__, __potion__ or __magisphere__ that deals damage, that item deals __【SL】__ extra damage."
+            },
+            skl_visionary: {
+                name: "Visionary",
+                maxInvestment: 5,
+                description: "When you work on a __Project__, up to __【SL × 100】__ zenit of material costs are automatically paid; additionally, you generate an additional __【SL】progress__ every day. If multiplecharacters with this Skill work on the same Project, the effects will be cumulative."
+            }
+        },
+        views: [
+            {
+                navHeader: "Invention types",
+                routerView: "invention-types"
+            }
+        ]
     }
 }
