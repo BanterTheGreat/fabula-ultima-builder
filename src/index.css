@@ -36,6 +36,13 @@ input {
   border-radius: 0.25rem/* 4px */;
 }
 
+select {
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--color-fabula-segment-green);
+  border-radius: 0.5rem/* 4px */;
+}
+
 /* this exists to style the segments in the slots */
 .segment-wrapper > *.fabula-segment {
   height: 100%;
@@ -64,4 +71,23 @@ input {
 
 * {
   font-family: Antonio;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(237, 246, 238);
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6f9b8e56;
+  border-radius: 10px;
 }
