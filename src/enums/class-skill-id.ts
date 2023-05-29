@@ -63,5 +63,11 @@ export enum ClassSkillId {
     Condemn = "skl_condemn",
     Encourage = "skl_encourage",
 
+    //Rogue
+    SeeYouLater = "skl_seeyoulater",
+    Dodge = "skl_dodge",
+    HighSpeed = "skl_highspeed",
+    Cheapshot = "skl_cheapshot",
+    SoulSteal = "skl_soulsteal",
 
 }

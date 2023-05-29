@@ -356,5 +356,43 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
             }
         },
         views: []
+    },
+    class_rogue: {
+        name: "Rogue",
+        passives: {
+            modifier: {
+                stat: Modifier.Inventory,
+                boost: 2
+            },
+            proficiency: []
+        },
+        skills: {
+            skl_seeyoulater: {
+                name: "See you later",
+                maxInvestment: 0,
+                description: "You may use an action and spend 1 Fabula Point to vanish from the current scene, reappearing whenever you want during a __different__ scene in which another Player Character is present. Describe how you escaped and miraculously got here!"
+            },
+            skl_dodge: {
+                name: "Dodge",
+                maxInvestment: 3,
+                description: "As long as you have no __shields__ and no __martial armor__ equipped, your Defense score is increased by __【SL】__."
+            },
+            skl_highspeed: {
+                name: "High speed",
+                maxInvestment: 3,
+                description: "At the start of a conflict, you may spend 10 Mind Points. If you do, choose one option and apply it before the start of the first round: perform a __free attack__ with a weapon you have equipped; __or__ perform a __Hinder__ or __Objective__ action. You also gain a bonus equal to __【SL】__ to all Checks you perform as part of the chosen option."
+            },
+            skl_cheapshot: {
+                name: "Cheap shot",
+                maxInvestment: 5,
+                description: "When you hit a creature with an attack, if the attack __only__ targeted that creature and they are suffering from __one or more status effects__, you may have it deal extra damage equal to __【SL + the number of status effects on the creature】__."
+            },
+            skl_soulsteal: {
+                name: "Soul steal",
+                maxInvestment: 5,
+                description: "You may use an action to perform a __【DEX + WLP】__ Check against the Magic Defense of a creature you can see. If you succeed and the target is a __soldier__, you recover __【SL】__ Inventory Points; if they are an __elite__ or __champion__, the GM gives you the target’s __soul treasure__, an item worth an amount of zenit __equal to or lower than【the target's level multiplied by 30, or by 50 if they are a Villain】__. This __soul treasure__ will appear inside your __backpack__; a creature can be successfully stolen from with this Skill only once. You gain a bonus equal to __【SL】__ to your __【DEX + WLP】__ Checks for this Skill."
+            }
+        },
+        views: []
     }
 }
