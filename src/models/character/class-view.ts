@@ -1,4 +1,4 @@
 export interface ClassView { 
-    NavHeader: string, 
-    RouterView: string 
+    navHeader: string, 
+    routerView: string 
 }

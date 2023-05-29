@@ -1,20 +1,19 @@
 <script setup lang="ts">
+//todo this file is worthless after the character builder menu is ready, remove after
+
 import ClassSelect from '@/components/class-select.vue';
 import ClassJson from '@/data/json/class.json';
 
 
 
-let ClassIds = Object.keys(ClassJson.Classes);
+let ClassIds = Object.keys(ClassJson);
 let ClassList: Record<string, string> = {};
 
 console.log(ClassIds);
 
 for (const classId of ClassIds) {
-    ClassList[classId] = ClassJson["Classes"][classId]["Name"];
+    ClassList[classId] = ClassJson[classId]["name"] as string;
 }
-
-console.log(ClassList);
-
 </script>
 
 <template>

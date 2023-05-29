@@ -7,12 +7,13 @@ export interface CharacterClass {
   id: string,
   name: string,
   passives: {
-    modifiers: {
+    modifier: {
       stat: "health" | "mind" | "inventory" | "meleeAccuracy" | "rangedAccuracy" | "defense" | "magicDefense" | "initiative" | "meleeDamage" | "rangedDamage" | "spellDamage" | "spellAccuracy",
       boost: number,
     }
-    proficiency?: Array<"martialMelee" | "martialRanged" | "martialArmor" | "martialShield" | "dualShield">
+    proficiency: Array<"martialMelee" | "martialRanged" | "martialArmor" | "martialShield" | "dualShield" | "ritualism">
   },
-  skills?: Record<string, ClassSkill>,
-  views?: Array<ClassView>,
+  skills: Record<string, ClassSkill>,
+  views: Array<ClassView>,
+
 };

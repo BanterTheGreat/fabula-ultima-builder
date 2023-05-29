@@ -1,5 +1,5 @@
 export interface ClassSkill {
     name: string,
-    proficiency: number,
-    maxProficiency: number,
+    investment: number,
+    maxInvestment: number,
 }

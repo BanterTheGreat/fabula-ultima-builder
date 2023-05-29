@@ -2,6 +2,8 @@ import { StaticArmorData } from "@/data/static-armor-data";
 import { StaticShieldData } from "@/data/static-shield-data";
 import { StaticWeaponData } from "@/data/static-weapon-data";
 
+import { StaticClassData } from "@/data/static-class-data";
+
 export class JsonHelper {
   public PrintFabulaDataToConsoleAsJson() {
     console.log("ARMOR DATA");
@@ -12,5 +14,8 @@ export class JsonHelper {
 
     console.log("WEAPON DATA");
     console.log(JSON.stringify(StaticWeaponData));
+
+    console.log("CLASS DATA");
+    console.log(JSON.stringify(StaticClassData));
   }
 }
