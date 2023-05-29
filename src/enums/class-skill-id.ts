@@ -20,7 +20,7 @@ export enum ClassSkillId {
     PainfulLession = "skl_painfullession",
     ShadowStrike = "skl_shadowstrike",
     Agony = "skl_agony",
-    
+
     //Elementalist
     RitualElementalism = "skl_ritualelementalism",
     Cataclysm = "skl_cataclysm",
@@ -42,5 +42,10 @@ export enum ClassSkillId {
     Provoke = "skl_provoke",
     Withstand = "skl_withstand",
 
-
+    //Guardian
+    Bodyguard = "skl_bodyguard",
+    DualShieldbearer = "skl_dualshieldbearer",
+    Protect = "skl_protect",
+    DefensiveMastery = "skl_defensivemastery",
+    Fortress = "skl_fortress",
 }

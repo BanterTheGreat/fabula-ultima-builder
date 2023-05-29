@@ -242,5 +242,43 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
             }
         },
         views: []
+    },
+    class_guardian: {
+        name: "Guardian",
+        passives: {
+            modifier: {
+                stat: Modifier.Health,
+                boost: 5
+            },
+            proficiency: [Proficiency.MartialArmor, Proficiency.MartialShield, Proficiency.DualShield]
+        },
+        skills: {
+            skl_bodyguard: {
+                name: "Bodyguard",
+                maxInvestment: 0,
+                description: "If you perform the __Guard__ action and choose to provide cover to another creature, that creature gains Resistance to all damage types until the start of your next turn."
+            },
+            skl_dualshieldbearer: {
+                name: "Dual shieldbearer",
+                maxInvestment: 0,
+                description: "You may now equip a __shield__ in your __main hand__ slot. As long as you have two shields equipped, you gain the benefits of both items and may treat them as the following combined two-handed melee __brawling__ weapon: \n Twin shields: \n Accuracy: __【MIG + MIG】__ Damage: __【HR + 5】 physical__ \n Deals extra damage equal to your __【SL】__ in __defensive mastery__ (above)."
+            },
+            skl_protect: {
+                name: "Protect",
+                maxInvestment: 0,
+                description: "When another creature is threatened by an __attack__, __spell__ or other __danger__, you may take their place (any Checks that are part of the danger will be performed against you; you may declare the use of this Skill __before or after__ the Checks have been made). If the danger already affected you, it affects you __twice__ (resolve both instances separately); you also cannot protect multiple creatures from the same danger. If you use this Skill during a conflict, you cannot use it again until the start of your next turn."
+            },
+            skl_defensivemastery: {
+                name: "Defensive mastery",
+                maxInvestment: 5,
+                description: "As long as you have a __shield__ or a __martial armor__ equipped, all damage you suffer is reduced by __【SL】__ (applied __before__ damage Affinities)."
+            },
+            skl_fortress: {
+                name: "Fortress",
+                maxInvestment: 5,
+                description: "Permanently increase your maximum Hit Points by __【SL × 3】__."
+            }
+        },
+        views: []
     }
 }
