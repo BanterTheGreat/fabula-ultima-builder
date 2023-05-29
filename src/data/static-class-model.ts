@@ -1,19 +1,21 @@
 import type { ClassSkillId } from "@/enums/class-skill-id"
-import type { ClassView } from "@/models/character/class-view"
+import type { Modifier } from "@/enums/modifier"
+import type { Proficiency } from "@/enums/proficiency"
+import type { RouterTab } from "@/models/character/router-tab"
 
 export interface ClassJsonModel {
     name: string,
     passives: {
         modifier: {
-            stat: "health" | "mind" | "inventory" | "meleeAccuracy" | "rangedAccuracy" | "defense" | "magicDefense" | "initiative" | "meleeDamage" | "rangedDamage" | "spellDamage" | "spellAccuracy",
+            stat: Modifier,
             boost: number
         },
-        proficiency: Array<"martialMelee" | "martialRanged" | "martialArmor" | "martialShield" | "dualShield" | "ritualism">
+        proficiency: Array<Proficiency>
     },
     skills: Record<string|ClassSkillId, {
         name:string,
         maxInvestment:number,
         description:string
     }>,
-    views: Array<ClassView>
+    views: Array<RouterTab>
 }

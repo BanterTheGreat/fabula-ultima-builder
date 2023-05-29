@@ -16,12 +16,10 @@ export class JsonHelper {
     console.log("WEAPON DATA");
     console.log(JSON.stringify(StaticWeaponData));
 
-
     console.log("CLASS DATA");
     console.log(JSON.stringify(StaticClassData));
 
     console.log("SPELL DATA");
     console.log(JSON.stringify(StaticSpellData));
-
   }
 }

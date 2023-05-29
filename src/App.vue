@@ -14,7 +14,6 @@ import ClassList from './views/class-list.vue';
 import characterBuilderVue from './views/character-builder.vue';
 import { ModalsContainer } from 'vue-final-modal';
 
-
 // Initial Calculating of values.
 new CharacterCalculator().Recalculate("statistics");
 </script>

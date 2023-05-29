@@ -1,4 +1,4 @@
-export interface ClassView { 
+export interface RouterTab { 
     navHeader: string, 
     routerView: string 
 }

@@ -42,9 +42,7 @@ export class CharacterState {
         storedArmors: [],
         storedOffHand: [],
       },
-      classes: [
-        
-      ]
+      classes: [],
       progression: InitialiseChoices(),
     }
 
