@@ -1,13 +1,15 @@
 import { ClassId } from "@/enums/class-id";
-import type { ClassJsonModel } from "./static-class-model";
+import type { ClassJson } from "../models/class-json";
+import { Modifier } from "@/enums/modifier";
+import { Proficiency } from "@/enums/proficiency";
 
-export const StaticClassData: Record<ClassId|string, ClassJsonModel> = {
+export const StaticClassData: Record<ClassId|string, ClassJson> = {
 
     class_arcanist: {
         name: "Arcanist",
         passives: {
             modifier: {
-                stat: "mind",
+                stat: Modifier.Mind,
                 boost: 5
             },
             proficiency: []
@@ -51,10 +53,10 @@ export const StaticClassData: Record<ClassId|string, ClassJsonModel> = {
         name: "Chimerist",
         passives: {
             modifier: {
-                stat: "mind",
+                stat: Modifier.Mind,
                 boost: 5
             },
-            proficiency: ["ritualism"]
+            proficiency: [Proficiency.Ritualism]
         },
         skills: {
             skl_feralspeech: {
@@ -94,10 +96,10 @@ export const StaticClassData: Record<ClassId|string, ClassJsonModel> = {
         name: "Darkblade",
         passives: {
             modifier: {
-                stat: "health",
+                stat: Modifier.Health,
                 boost: 5
             },
-            proficiency: ["martialMelee", "martialArmor"]
+            proficiency: [Proficiency.MartialMelee, Proficiency.MartialArmor]
         },
         skills: {
             skl_darkblood: {
@@ -132,10 +134,10 @@ export const StaticClassData: Record<ClassId|string, ClassJsonModel> = {
         name: "Elementalist",
         passives: {
             modifier: {
-                stat: "mind",
+                stat: Modifier.Mind,
                 boost: 5
             },
-            proficiency: ["ritualism"]
+            proficiency: [Proficiency.Ritualism]
         },
         skills: {
             skl_ritualelementalism: {
