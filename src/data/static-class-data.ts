@@ -551,5 +551,43 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
             }
         },
         views: []
+    },
+    class_weaponmaster: {
+        name: "Weaponmaster",
+        passives: {
+            modifier: {
+                stat: Modifier.Health,
+                boost: 5
+            },
+            proficiency: [Proficiency.MartialMelee, Proficiency.MartialShield]
+        },
+        skills: {
+            skl_bladestorm: {
+                name: "Bladestorm",
+                maxInvestment: 0,
+                description: "When you perform a __melee__ attack, you may spend 10 Mind Points to choose one option: the attack gains __multi (2)__; __or__ you increase the attack's __multi__ property by one, up to a maximum of __multi (3)__."
+            },
+            skl_counterattack: {
+                name: "Counterattack",
+                maxInvestment: 0,
+                description: "After an enemy __hits or misses you with a melee attack__, if the Result of their Accuracy Check was an __even number__, you may perform a __free attack__ against that enemy (after their attack has been fully resolved). This attack must be a __melee__ attack and must have that enemy as its __only__ target; treat your __High Roll (HR)__ as 0 when calculating damage dealt by this attack."
+            },
+            skl_breach: {
+                name: "Breach",
+                maxInvestment: 3,
+                description: "You may use an action and spend 5 Mind Points to perform a ___free attack__ with a __melee__ weapon you have equipped. This attack must target a __single creature__. If the attack is successful, it deals no damage and you choose one option: you destroy one shield equipped by the target; __or__ you destroy the target's equipped armor; __or__ whenever the target suffers damage from a source before the start of your next turn, that source deals __【SL × 2】__ extra damage to them."
+            },
+            skl_bonecrusher: {
+                name: "Bone crusher",
+                maxInvestment: 4,
+                description: "When you hit one or more targets with a __melee__ attack that would deal damage, you may have the attack deal no damage. If you do, choose one option: inflict __dazed__ on each target hit by the attack; __or__ inflict __weak__ on each target hit by the attack; __or__ each target hit by the attack loses __【SL × 10】__ Mind Points. Describe your maneuver!"
+            },
+            skl_meleeweaponmastery: {
+                name: "Melee weapon mastery",
+                maxInvestment: 4,
+                description: "You gain a bonus equal to __【SL】__ to all Accuracy Checks with __melee__ weapons."
+            }
+        },
+        views: []
     }
 }

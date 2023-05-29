@@ -97,4 +97,11 @@ export enum ClassSkillId {
     TavernTalk = "skl_taverntalk",
     Resourceful = "skl_resourceful",
     FaithfulCompanion = "skl_faithfulcompanion",
+
+    //Weaponmaster
+    Bladestorm = "skl_bladestorm",
+    Counterattack = "skl_counterattack",
+    Breach = "skl_breach",
+    BoneCrusher = "skl_bonecrusher",
+    MeleeWeaponMastery = "skl_meleeweaponmastery",
 }
