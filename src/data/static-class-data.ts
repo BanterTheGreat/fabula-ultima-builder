@@ -318,5 +318,43 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
             }
         },
         views: []
+    },
+    class_orator: {
+        name: "Orator",
+        passives: {
+            modifier: {
+                stat: Modifier.Mind,
+                boost: 5
+            },
+            proficiency: []
+        },
+        skills: {
+            skl_unexpectedally: {
+                name: "Unexpected ally",
+                maxInvestment: 0,
+                description: "You may use an action and spend 1 Fabula Point to choose a __non-hostile__ creature able to hear and understand you. If you do, that creature becomes helpful towards you so long as you are kind and respectful to them and your requests are reasonable."
+            },
+            skl_mytrustinyou: {
+                name: "My trust in you",
+                maxInvestment: 2,
+                description: "After another Player Character who is able to hear you performs a Check, you may spend 1 Fabula Point and invoke one of their __Traits__ or __Bonds__ in order to let them reroll dice or improve the Result of the Check (following the normal rules). Then, if you have a __Bond__ towards that character, they recover __【SL × 10】__ Mind Points."
+            },
+            skl_persuasive: {
+                name: "Persuasive",
+                maxInvestment: 2,
+                description: "When you successfully perform a Check to fill or erase sections of a Clock, if your approach relied on __charm__, __diplomacy__, __deception__ or __intimidation__, you may spend up to __【SL × 20】__ Mind Points. If you do, fill or erase an additional section of that Clock for every 20 Mind Points you spend this way"
+            },
+            skl_condemn: {
+                name: "Condemn",
+                maxInvestment: 4,
+                description: "You may use an action and spend 5 Mind Points to perform an Opposed __【INS + WLP】__ Check against a creature that can hear and understand you — describe your accusations! If you succeed, the target loses __【SL × 10】__ Mind Points and suffers __dazed__ or __shaken__ (your choice). \n You gain a bonus equal to __【SL】__ to your __【INS + WLP】__ Checks for this Skill."
+            },
+            skl_encourage: {
+                name: "Encourage",
+                maxInvestment: 6,
+                description: "During a conflict, you may use an action and spend 5 Mind Points to choose another creature that can hear and understand you. That creature recovers __【SL × 5】__ Hit Points and chooses __Dexterity__, __Insight__, __Might__, or __Willpower__: they treat the chosen Attribute as being one die size higher (up to a maximum of __d12__) until the start of your next turn."
+            }
+        },
+        views: []
     }
 }

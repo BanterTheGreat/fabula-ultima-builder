@@ -56,4 +56,12 @@ export enum ClassSkillId {
     Focused = "skl_focused",
     QuickAssessment = "skl_quickassessment",
 
+    //Orator
+    UnexpectedAlly = "skl_unexpectedally",
+    MyTrustInYou = "skl_mytrustinyou",
+    Persuasive = "skl_persuasive",
+    Condemn = "skl_condemn",
+    Encourage = "skl_encourage",
+
+
 }
