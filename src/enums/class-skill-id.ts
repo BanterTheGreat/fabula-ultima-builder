@@ -48,4 +48,12 @@ export enum ClassSkillId {
     Protect = "skl_protect",
     DefensiveMastery = "skl_defensivemastery",
     Fortress = "skl_fortress",
+
+    //Loremaster: 
+    KnowledgeIsPower = "skl_knowledgeispower",
+    TrainedMemory = "skl_trainedmemory",
+    FlashOfInsight = "skl_flashofinsight",
+    Focused = "skl_focused",
+    QuickAssessment = "skl_quickassessment",
+
 }

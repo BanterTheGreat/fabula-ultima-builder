@@ -280,5 +280,43 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
             }
         },
         views: []
+    },
+    class_loremaster: {
+        name: "Loremaster",
+        passives: {
+            modifier: {
+                stat: Modifier.Mind,
+                boost: 5
+            },
+            proficiency: []
+        },
+        skills: {
+            skl_knowledgeispower: {
+                name: "Knowledge is power",
+                maxInvestment: 0,
+                description: "When you perform an Accuracy Check, you may replace __one__ of the Attribute dice with __Insight__ (such as __【INS + INS】__ for a __pistol__ or __【INS + MIG】__ for a __waraxe__)."
+            },
+            skl_trainedmemory: {
+                name: "Trained memory",
+                maxInvestment: 0,
+                description: "You may perfectly recall the details of any scene you have visited within the past week. You can \"go back in time\" within your mind in order to examine and investigate such scenes again — your __Flash of Insight__ Skill will apply to these memories as well."
+            },
+            skl_flashofinsight: {
+                name: "Flash of insight",
+                maxInvestment: 3,
+                description: "When you roll a __13 or higher__ on a Check performed to investigate a creature, item or location — this includes using the __Study__ action during a conflict — you may ask the Game Master up to __【SL】__ questions concerning the subject of your investigation. You may ask these questions immediately or save them for later; whenever you ask one of these questions, the Game Master will answer truthfully and you will describe your character's deductive process. \n This Skill may only be used once on the same creature, item or location."
+            },
+            skl_focused: {
+                name: "Focused",
+                maxInvestment: 5,
+                description: "Permanently increase your maximum Mind Points by __【SL × 3】__. \n When you perform an Open Check using __【INS + INS】__, you gain a bonus equal to __【SL】__ on that Check (this __only__ applies to Open Checks)"
+            },
+            skl_quickassessment: {
+                name: "Quick assessment",
+                maxInvestment: 6,
+                description: "At the start of a conflict, you may spend up to __【SL × 5】__ Mind Points. For every 5 Mind Points you spend this way, choose one option: choose a creature you can see and the GM reveals one of their __Traits__; __or__ name a damage type and choose a creature  you can see, and the GM reveals that creature's __Affinity__ towards that damage type."
+            }
+        },
+        views: []
     }
 }
