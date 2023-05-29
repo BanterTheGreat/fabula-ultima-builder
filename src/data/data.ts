@@ -6,11 +6,14 @@ import weaponJson from "@/data/json/weapon.json";
 import armorJson from "@/data/json/armor.json";
 import shieldJson from "@/data/json/shield.json";
 import spellsJson from "@/data/json/spell.json";
+import classJson from "@/data/json/class.json";
 
 import type { Weapon } from "@/models/equipment/weapon";
 import type { Armor } from "@/models/equipment/armor";
 import type { Shield } from "@/models/equipment/shield";
 import type { Spell } from "@/models/spell";
+import type { ClassState } from "@/models/class-state";
+import type { ClassJson } from "@/models/class-json";
 
 export const EquipmentData = reactive<EquipmentState>(
   {
@@ -26,8 +29,10 @@ export const SpellData = reactive<SpellState>(
   }
 );
 
-export const ClassData = reactive<>(
-
+export const ClassData = reactive<ClassState>(
+  {
+    class: {},
+  }
 )
 
 
@@ -43,4 +48,7 @@ export function InitialiseData() {
 
   const spells = spellsJson as Record<string, Spell>;
   SpellData.spells = spells;
+
+  const classes = classJson as Record<string, ClassJson>;
+  ClassData.class = classes;
 }

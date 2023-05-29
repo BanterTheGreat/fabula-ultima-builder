@@ -2,6 +2,7 @@
 
 const props = defineProps<{
   text: string,
+  styleClass: string,
 }>();
 
 function getTextParts(): { text?: string, bold: boolean, newLine: boolean }[] {
@@ -61,7 +62,7 @@ function getTextParts(): { text?: string, bold: boolean, newLine: boolean }[] {
 
 <template>
   <template v-for="result in getTextParts()">
-      <template v-if="result.bold"><strong>{{result.text}}</strong></template>
+      <template v-if="result.bold"><b v-bind:class="styleClass">{{result.text}}</b></template>
       <template v-if="result.newLine"><br /></template>
       <template v-if="!result.newLine && !result.bold">{{result.text}}</template>
   </template>
