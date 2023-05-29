@@ -10,8 +10,8 @@ import Segment from './views/segment.vue';
 import Statistic from './views/statistics.vue';
 import TraitInfo from './views/traits/trait-info.vue';
 import textWithBoldVue from './views/text-with-bold.vue';
+import ClassList from './views/class-list.vue';
 import characterBuilderVue from './views/character-builder.vue';
-
 import { ModalsContainer } from 'vue-final-modal';
 
 // Initial Calculating of values.
@@ -73,6 +73,7 @@ new CharacterCalculator().Recalculate("statistics");
       <Segment title="Big info panel">
         <SegmentBody>
           <textWithBoldVue text="You weave magical energy and protect the targets from the fury of the elements. \n Choose a damage type: __air__, __bolt__, __earth__, __fire__, __water__ or __ice__. Until this spell ends, each target gains Resistance against the chosen damage type." />
+          <ClassList/>
         </SegmentBody>
       </Segment>
     </div>
