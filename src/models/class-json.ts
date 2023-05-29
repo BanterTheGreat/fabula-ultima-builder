@@ -3,7 +3,7 @@ import type { Modifier } from "@/enums/modifier"
 import type { Proficiency } from "@/enums/proficiency"
 import type { RouterTab } from "@/models/character/router-tab"
 
-export interface ClassJsonModel {
+export interface ClassJson {
     name: string,
     passives: {
         modifier: {
