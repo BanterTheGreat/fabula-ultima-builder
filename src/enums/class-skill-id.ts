@@ -70,4 +70,11 @@ export enum ClassSkillId {
     Cheapshot = "skl_cheapshot",
     SoulSteal = "skl_soulsteal",
 
+    //Sharpshooter
+    Barrage = "skl_barrage",
+    Crossfire = "skl_crossfire",
+    RangedWeaponMastery = "skl_rangedweaponmastery",
+    WarningShot = "skl_warningshot",
+    Hawkeye = "skl_hawkeye",
+
 }

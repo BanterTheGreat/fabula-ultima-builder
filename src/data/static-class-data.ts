@@ -394,5 +394,43 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
             }
         },
         views: []
+    },
+    class_sharpshooter: {
+        name: "Sharpshooter",
+        passives: {
+            modifier: {
+                stat: Modifier.Health,
+                boost: 5
+            },
+            proficiency: [Proficiency.MartialRanged, Proficiency.MartialShield]
+        },
+        skills: {
+            skl_barrage: {
+                name: "Barrage",
+                maxInvestment: 0,
+                description: "When you perform a __ranged__ attack, you may spend 10 Mind Points to choose one option: the attack gains __multi (2)__; __or__ you increase the attack's __multi__ property by one, up to a maximum of__ multi (3)__"
+            },
+            skl_crossfire: {
+                name: "Crossfire",
+                maxInvestment: 0,
+                description: "After a creature you can see performs a __ranged__ attack, you may spend an amount of Mind Points equal to the total Result of their Accuracy Check in order to have the attack fail automatically against all targets. You can only use this Skill if you have a __ranged__ weapon equipped, and it has no effect if the Accuracy Check was a __critical success__."
+            },
+            skl_rangedweaponmastery: {
+                name: "Ranged weapon mastery",
+                maxInvestment: 4,
+                description: "You gain a bonus equal to __【SL】__ to all Accuracy Checks with __ranged__ weapons."
+            },
+            skl_warningshot: {
+                name: "Warning shot",
+                maxInvestment: 4,
+                description: "When you hit one or more targets with a __ranged__ attack that would deal damage, you may have the attack deal no damage. If you do, choose one option: inflict __shaken__ on each target hit by the attack; __or__ inflict __slow__ on each target hit by the attack; __or__ each target hit by the attack loses __【SL × 10】__ Mind Points. Describe your maneuver!"
+            },
+            skl_hawkeye: {
+                name: "Hawkeye",
+                maxInvestment: 5,
+                description: "When you perform the __Guard__ action, if you choose __not__ to provide cover to another creature, you may choose one option: the next __ranged__ attack you perform before the end of the current scene will deal __【SL × 2】__ extra damage; __or__ you may immediately perform a __free attack__ with a __bow__ or __firearm__ you have equipped, treating your __High Roll (HR)__ as 0 when calculating damage dealt by this attack."
+            }
+        },
+        views: []
     }
 }
