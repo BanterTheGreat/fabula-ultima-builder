@@ -91,7 +91,7 @@
         "name": "Darkblade",
         "passives": {
             "modifier": {
-                "stat": "Health",
+                "stat": "health",
                 "boost": 5
             },
             "proficiency": [
@@ -212,7 +212,7 @@
         "name": "Fury",
         "passives": {
             "modifier": {
-                "stat": "Health",
+                "stat": "health",
                 "boost": 5
             },
             "proficiency": [
@@ -253,7 +253,7 @@
         "name": "Guardian",
         "passives": {
             "modifier": {
-                "stat": "Health",
+                "stat": "health",
                 "boost": 5
             },
             "proficiency": [
@@ -409,7 +409,7 @@
         "name": "Sharpshooter",
         "passives": {
             "modifier": {
-                "stat": "Health",
+                "stat": "health",
                 "boost": 5
             },
             "proficiency": [
@@ -571,7 +571,7 @@
         "name": "Weaponmaster",
         "passives": {
             "modifier": {
-                "stat": "Health",
+                "stat": "health",
                 "boost": 5
             },
             "proficiency": [
