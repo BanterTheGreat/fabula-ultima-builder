@@ -35,5 +35,12 @@ export enum ClassSkillId {
     AbsorbMP = "skl_absorbmp",
     EntropicMagic = "skl_entropicmagic",
 
+    //Fury
+    Frenzy = "skl_frenzy",
+    IndomitableSpirit = "skl_indomitablespirit",
+    Adrenaline = "skl_adrenaline",
+    Provoke = "skl_provoke",
+    Withstand = "skl_withstand",
+
 
 }

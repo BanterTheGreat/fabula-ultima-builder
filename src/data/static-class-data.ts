@@ -205,5 +205,42 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
         },
         views: []
     },
-
+    class_fury: {
+        name: "Fury",
+        passives: {
+            modifier: {
+                stat: Modifier.Health,
+                boost: 5
+            },
+            proficiency: [Proficiency.MartialMelee, Proficiency.MartialArmor]
+        },
+        skills: {
+            skl_frenzy: {
+                name: "Frenzy",
+                maxInvestment: 0,
+                description: "Your Accuracy Checks with __brawling__, __dagger__, __flail__ and __thrown__ weapons trigger a __critical success__ if both dice show the same number (and the Check is not a __fumble__)."
+            },
+            skl_indomitablespirit: {
+                name: "Indomidable Spirit",
+                maxInvestment: 4,
+                description: "When you spend one or more Fabula Points, you get an additional benefit — choose one option: you recover __【SL × 5】__ Hit Points; or you recover __【SL × 5】__ Mind Points; __or__ you recover from a single status effect of your choice."
+            },
+            skl_adrenaline: {
+                name: "Adrenaline",
+                maxInvestment: 5,
+                description: "As long as you are in __Crisis__, you deal __【SL × 2】__ extra damage (be it with attacks, spells, Arcana, items or any other method)."
+            },
+            skl_provoke: {
+                name: "Provoke",
+                maxInvestment: 5,
+                description: "You may use an action and spend 5 Mind Points to perform an Opposed __【MIG + WLP】__Check against a creature you can see — describe how you taunt them! If you succeed, the target suffers __enraged__ and is compelled to focus their attention on you (their attacks and offensive spells must include you among the targets if possible). This compulsion ends if you fall unconscious or leave the scene, if the creature is no longer __enraged__, or if they are successfully __provoked__ by someone else. You gain a bonus equal to __【SL】__ to your __【MIG + WLP】__ Checks for this Skill."
+            },
+            skl_withstand: {
+                name: "Withstand",
+                maxInvestment: 5,
+                description: "When you perform the __Guard__ action, if you choose __not__ to provide cover to another creature, you recover Hit Points equal to __【SL, multiplied by the highest strength among your Bonds】__ and choose __Might__ or __Willpower__: you treat the chosen Attribute as being one die size higher (up to a maximum of __d12__) until the end of your next turn"
+            }
+        },
+        views: []
+    }
 }
