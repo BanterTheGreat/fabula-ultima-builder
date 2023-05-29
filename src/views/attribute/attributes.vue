@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import AttributeDisplayVue from '@/components/attribute-display.vue';
-
 </script>
 
 <template>

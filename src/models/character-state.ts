@@ -2,6 +2,7 @@ import { Emotion } from "@/enums/emotion";
 import type { Character } from "./character";
 import { JsonHelper } from "../helpers/json-helper";
 import { Attribute } from "./character/attribute";
+import { InitialiseChoices } from "@/helpers/choice-builder";
 
 export class CharacterState {
   constructor() {
@@ -9,7 +10,7 @@ export class CharacterState {
     var tempCharacter: Character = {
       id: crypto.randomUUID(),
       general: { 
-        name: "John", pronouns: "him", experience: 1, fabulaPoints: 1, level: 1, zenit: 300 
+        name: "John", pronouns: "him", experience: 1, fabulaPoints: 1, level: 10, zenit: 300 
       }, 
       traits: {
         identity: "Unknown",
@@ -40,10 +41,13 @@ export class CharacterState {
         storedWeapons: [],
         storedArmors: [],
         storedOffHand: [],
-      }
+      },
+      progression: InitialiseChoices(),
     }
 
     this._character = tempCharacter;
+
+    console.log(this._character);
   }
 
   private _character: Character;
