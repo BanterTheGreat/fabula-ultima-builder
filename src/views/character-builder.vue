@@ -15,7 +15,6 @@ import { state } from '@/singletons/state';
 </template>
 
 <style scoped>
-
 #sidebar {
     position: fixed;
     width: 22rem;
@@ -23,5 +22,4 @@ import { state } from '@/singletons/state';
     top: 3rem;
     bottom: 0;
 }
-
 </style>

@@ -5,6 +5,8 @@ import type { InitialAttributeChoice } from "@/models/character-builder/initial-
 import type { UpgradeAttributeChoice } from "@/models/character-builder/upgrade-attribute-choice";
 import type { Choices } from "@/types/choices";
 import type { InitialSkillChoice } from "@/models/character-builder/initial-class-choice";
+import AttributeModal from "@/views/modals/attribute-modal.vue";
+import ClassSelectModal from "@/views/modals/class-select-modal.vue";
 
 export class CharacterBuilderButtonHelper {
   public static GetInitialAttributeButtonText(choice: InitialAttributeChoice) {
@@ -37,5 +39,19 @@ export class CharacterBuilderButtonHelper {
     }
 
     return notUsed ? "border-rose-600" : "";
+  }
+
+  public static GetButtonModal(choice: Choices): any {
+    // Any type since components are fucky.
+    switch(choice.type) {
+      case ChoiceType.InitialAttributes:
+        return AttributeModal;
+      case ChoiceType.InitialSkills:
+        return ClassSelectModal;
+      case ChoiceType.UpgradeAttributes:
+      case ChoiceType.Spell:
+      case ChoiceType.Skill:
+        return null;
+    }
   }
 }

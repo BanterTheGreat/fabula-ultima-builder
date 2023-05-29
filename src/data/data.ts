@@ -26,6 +26,10 @@ export const SpellData = reactive<SpellState>(
   }
 );
 
+export const ClassData = reactive<>(
+
+)
+
 
 export function InitialiseData() {
   const weaponsJson = weaponJson as Record<string, Weapon>;

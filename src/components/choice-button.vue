@@ -50,13 +50,12 @@ import type { InitialAttributeChoice } from '@/models/character-builder/initial-
 
   function openModal() {
     const { open, close } = useModal({
-        // Eventually, this will decide what modal to open depending on the button. But we only have 1 type for now :(
-        component: AttributeModal,
+        component: CharacterBuilderButtonHelper.GetButtonModal(props.characterChoice?.choice),
         attrs: {
           choice: props.characterChoice.choice as any,
         },
       })
-    open();    
+    open();
   }
 
 </script>
