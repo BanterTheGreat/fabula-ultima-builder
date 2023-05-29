@@ -28,4 +28,12 @@ export enum ClassSkillId {
     Spellblade = "skl_spellblade",
     ElementalMagic = "skl_elementalmagic",
 
+    //Entropist
+    LuckySeven = "skl_luckyseven",
+    RitualEntropism = "skl_ritualentropism",
+    StolenTime = "skl_stolentime",
+    AbsorbMP = "skl_absorbmp",
+    EntropicMagic = "skl_entropicmagic",
+
+
 }

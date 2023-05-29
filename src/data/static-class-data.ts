@@ -48,7 +48,6 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
             }
         ]
     },
-
     class_chimerist: {
         name: "Chimerist",
         passives: {
@@ -167,6 +166,44 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
             }
         },
         views: []
-    }
+    },
+    class_entropist: {
+        name: "Entropist",
+        passives: {
+            modifier: {
+                stat: Modifier.Mind,
+                boost: 5
+            },
+            proficiency: [Proficiency.Ritualism]
+        },
+        skills: {
+            skl_luckyseven: {
+                name: "Lucky seven",
+                maxInvestment: 0,
+                description: "You have a __lucky number__; at the beginning of each session, that number is 7. Once per scene after you perform a Check, you may replace the value shown on one of the dice you rolled with your lucky number (even if this would give an impossible Result, such as a value of 7 on a d6). If you do, the replaced value becomes your __new__ lucky number"
+            },
+            skl_ritualentropism: {
+                name: "Ritual entropism",
+                maxInvestment: 0,
+                description: "You may perform Rituals whose effects fall within the __Entropism__ discipline. Entropism Rituals use __【INS + WLP】__ for the Magic Check."
+            },
+            skl_stolentime: {
+                name: "Stolen time",
+                maxInvestment: 4,
+                description: "During a conflict, you may use an action to interfere with the flow of time by spending up to __【SL × 5】__ Mind Points. For every 5 Mind Points you spend this way, choose one option: one creature you can see suffers __slow__; __or__ one creature you can see recovers from __slow__; or one creature you can see may immediately perform the __Equipment__ action for free; __or__ choose one ally you can see who has yet to take a turn during this round: that ally may take their turn immediately after yours during this round. \n Each option can only be chosen once per use of this Skill."
+            },
+            skl_absorbmp: {
+                name: "Absorb mp",
+                maxInvestment: 5,
+                description: "After you suffer damage, you may immediately recover __【SL × 2】__ Mind Points."
+            },
+            skl_entropicmagic: {
+                name: "Entropic magic",
+                maxInvestment: 10,
+                description: "Each time you acquire this Skill, learn one Entropist spell (see next two pages). Offensive Entropist spells use __【INS + WLP】__ for the Magic Check."
+            }
+        },
+        views: []
+    },
 
 }
