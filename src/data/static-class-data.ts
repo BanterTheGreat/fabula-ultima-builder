@@ -513,5 +513,43 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
                 routerView: "invention-types"
             }
         ]
+    },
+    class_wayfarer: {
+        name: "Wayfarer",
+        passives: {
+            modifier: {
+                stat: Modifier.Inventory,
+                boost: 2
+            },
+            proficiency: []
+        },
+        skills: {
+            skl_welltraveled: {
+                name: "Well traveled",
+                maxInvestment: 0,
+                description: "You reduce the die rolled for your __travel rolls__ by one size (to a minimum of __d6__).If multiple characters have this Skill, the effects are __not__ cumulative."
+            },
+            skl_treasurehunter: {
+                name: "Treasure hunter",
+                maxInvestment: 2,
+                description: "When your group journeys on the world map, you will make a __discovery __on a roll of __【SL + 1】__ or lower on the travel roll (instead of only on a __1__)."
+            },
+            skl_taverntalk: {
+                name: "Tavern talk",
+                maxInvestment: 3,
+                description: "When you __rest__ inside an inn or tavern, you may ask the Game Master up to __【SL】__ questions about your surroundings and the people who live here; the Game Master will answer truthfully and you describe how you gathered the information."
+            },
+            skl_resourceful: {
+                name: "Resourceful",
+                maxInvestment: 4,
+                description: "You recover __【SL】__ Inventory Points after each __travel roll__ (see page __106__)."
+            },
+            skl_faithfulcompanion: {
+                name: "Faithful companion",
+                maxInvestment: 5,
+                description: "Together with the rest of your group, design a __level 5 beast__, __construct__, __elemental__ or __plant__ creature (see page __302__) that becomes your __companion__. This creature has __no Initiative score__ and __does not level up__, can have__ up to two basic attacks__, gains a bonus equal to __【SL】__ to Accuracy Checks and Magic Checks, and their maximum Hit Points are equal to __【(SL multiplied by the companion's base Might die size) + half your level】__. \n Your companion doesn't get a turn during conflicts, but on your turn you can use an action to have the companion perform an action (only once per turn). If you leave a scene, your companion leaves with you. \n If your companion falls to 0 Hit Points, they flee and rejoin you at the start of the next scene in which you are present, with HP equal to their __Crisis score__. \n When you __rest__, your companion also gains the full benefits of resting."
+            }
+        },
+        views: []
     }
 }

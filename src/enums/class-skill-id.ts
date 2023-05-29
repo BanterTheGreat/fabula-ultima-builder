@@ -91,4 +91,10 @@ export enum ClassSkillId {
     SecretFormula = "skl_secretformula",
     Visionary = "skl_visionary",
 
+    //Wayfarer
+    WellTraveled = "skl_welltraveled",
+    TreasureHunter = "skl_treasurehunter",
+    TavernTalk = "skl_taverntalk",
+    Resourceful = "skl_resourceful",
+    FaithfulCompanion = "skl_faithfulcompanion",
 }
