@@ -432,5 +432,43 @@ export const StaticClassData: Record<ClassId|string, ClassJson> = {
             }
         },
         views: []
+    },
+    class_spiritist: {
+        name: "Spiritist",
+        passives: {
+            modifier: {
+                stat: Modifier.Mind,
+                boost: 5
+            },
+            proficiency: [Proficiency.Ritualism]
+        },
+        skills: {
+            skl_ritualspiritism: {
+                name: "Ritual spiritism",
+                maxInvestment: 0,
+                description: "You may perform Rituals whose effects fall within the Spiritism discipline. __Spiritism__ Rituals use __【INS + WLP】__ for the Magic Check."
+            },
+            skl_supportmagic: {
+                name: "Support magic",
+                maxInvestment: 0,
+                description: "When you cast a spell that targets one or more allies, if you have an __arcane__ weapon equipped, you may choose one of those allies you have a __Bond__ towards. If you do, that ally gains a bonus to the next Check they perform during the current scene; this bonus is equal to the __strength__ of your Bond towards them."
+            },
+            skl_vismagus: {
+                name: "Vismagus",
+                maxInvestment: 0,
+                description: "When you cast a spell, if you don't have enough Mind Points to pay for its total cost, you may choose to spend __twice as many__ Hit Points instead. You cannot use this Skill if doing so would reduce you to 0 Hit Points. If a spell cast this way would cause you to recover Hit Points, you instead recover no Hit Points (the spell functions normally on any other target)."
+            },
+            skl_healingpower: {
+                name: "Healing power",
+                maxInvestment: 2,
+                description: "When you cast a spell that targets one or more allies, if you have an __arcane__ weapon equipped, you may have each of those allies recover an amount of Hit Points equal to __【SL, multiplied by the number of Bonds you have】__. \n This healing is separate from any healing caused by the effects of the spell."
+            },
+            skl_spiritualmagic: {
+                name: "spiritual magic",
+                maxInvestment: 10,
+                description: "Each time you acquire this Skill, learn one Spiritist spell (see next two pages). Offensive Spiritist spells use __【INS + WLP】__ for the Magic Check."
+            }
+        },
+        views: []
     }
 }

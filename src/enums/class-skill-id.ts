@@ -77,4 +77,11 @@ export enum ClassSkillId {
     WarningShot = "skl_warningshot",
     Hawkeye = "skl_hawkeye",
 
+    //Spiritist
+    RitualSpiritism = "skl_ritualspiritism",
+    SupportMagic = "skl_supportmagic",
+    Vismagus = "skl_vismagus",
+    HealingPower = "skl_healingpower",
+    SpiritualMagic = "skl_spiritualmagic",
+
 }
