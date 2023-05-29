@@ -1,5 +1,5 @@
 export enum Modifier {
-    Health = "Health",
+    Health = "health",
     Mind = "mind",
     Inventory = "inventory",
     MeleeAccuracy = "meleeAccuracy",
