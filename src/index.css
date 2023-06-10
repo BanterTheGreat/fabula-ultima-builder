@@ -12,6 +12,16 @@
   }
 }
 
+@layer utilities {
+  .fabula-modal-button {
+    background: rgb(237,246,238);
+background: -moz-linear-gradient(90deg, rgba(237,246,238,1) 0%, rgba(243,249,243,1) 8%, rgba(253,254,254,1) 27%);
+background: -webkit-linear-gradient(90deg, rgba(237,246,238,1) 0%, rgba(243,249,243,1) 8%, rgba(253,254,254,1) 27%);
+background: linear-gradient(90deg, rgba(237,246,238,1) 0%, rgba(243,249,243,1) 8%, rgba(253,254,254,1) 27%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf6ee",endColorstr="#fdfefe",GradientType=1);
+  }
+}
+
 .fabula-segment {
   padding: 1%;
   background: rgb(237, 246, 238);
@@ -20,6 +30,7 @@
   background: linear-gradient(90deg, rgba(237, 246, 238, 1) 0%, rgba(243, 249, 243, 1) 33%, rgba(253, 254, 254, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf6ee", endColorstr="#fdfefe", GradientType=1);
 }
+
 
 .divider {
   border-bottom: 1px solid;
@@ -33,18 +44,22 @@ input {
   padding: 0;
   margin: 0;
   border: 1px solid var(--color-fabula-segment-green);
-  border-radius: 0.25rem/* 4px */;
+  border-radius: 0.25rem
+    /* 4px */
+  ;
 }
 
 select {
   padding: 0;
   margin: 0;
   border: 1px solid var(--color-fabula-segment-green);
-  border-radius: 0.5rem/* 4px */;
+  border-radius: 0.5rem
+    /* 4px */
+  ;
 }
 
 /* this exists to style the segments in the slots */
-.segment-wrapper > *.fabula-segment {
+.segment-wrapper>*.fabula-segment {
   height: 100%;
 }
 
