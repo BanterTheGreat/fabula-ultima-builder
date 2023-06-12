@@ -20,7 +20,6 @@ new CharacterCalculator().Recalculate("statistics");
 </script>
 
 <template>
-  
   <!-- Support Modals -->
   <ModalsContainer />
 
@@ -72,16 +71,39 @@ new CharacterCalculator().Recalculate("statistics");
     </div>
     <div class="col-span-6 row-span-4 mx-1">
       <Segment title="Big info panel">
-        <SegmentBody>
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About</router-link>
-          <router-view></router-view>
+        <!-- removed the padding on this segment to make the header look nice -->
+        <SegmentBody style="padding: 0 !important;">
+          <header class="bg-fabula-header-green text-white ">
+            <nav class="x py-3 p-5">
+              <div class="flex flex-row">
+
+                <!-- todo dynamically add tabs based on selected classes "views" property -->
+                <!-- todo maybe move this into it's own view, idk tho -->
+                <!-- todo needs better styling -->
+                <!-- todo write a home page with explanation -->
+
+                <div class="px-2">
+                  <router-link to="/">Home</router-link>
+                </div>
+
+                <div class="px-2">
+                  <router-link to="/about">About</router-link>
+                </div>
+              </div>
+
+
+            </nav>
+          </header>
+          
+          <div class="p-[1%]">
+            <router-view></router-view>
+          </div>
+
         </SegmentBody>
       </Segment>
     </div>
     <!-- right side end -->
   </div>
-
 </template>
 
 <style scoped>
