@@ -13,6 +13,8 @@ import textWithBoldVue from './views/text-with-bold.vue';
 import characterBuilderVue from './views/character-builder.vue';
 import { ModalsContainer } from 'vue-final-modal';
 
+import router from './router';
+
 // Initial Calculating of values.
 new CharacterCalculator().Recalculate("statistics");
 </script>
@@ -71,6 +73,9 @@ new CharacterCalculator().Recalculate("statistics");
     <div class="col-span-6 row-span-4 mx-1">
       <Segment title="Big info panel">
         <SegmentBody>
+          <router-link to="/">Home</router-link>
+          <router-link to="/about">About</router-link>
+          <router-view></router-view>
         </SegmentBody>
       </Segment>
     </div>
