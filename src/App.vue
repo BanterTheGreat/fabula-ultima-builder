@@ -11,9 +11,12 @@ import Statistic from './views/statistics.vue';
 import TraitInfo from './views/traits/trait-info.vue';
 import characterBuilderVue from './views/character-builder.vue';
 import { ModalsContainer } from 'vue-final-modal';
+import RouterHeader from './views/router-header.vue';
 
 // Initial Calculating of values.
 new CharacterCalculator().Recalculate("statistics");
+
+
 </script>
 
 <template>
@@ -71,29 +74,7 @@ new CharacterCalculator().Recalculate("statistics");
       <Segment title="Big info panel">
         <!-- removed the padding on this segment to make the header look nice -->
         <SegmentBody style="padding: 0 !important;">
-          <header class="bg-fabula-header-green text-white ">
-            <nav class="x py-3 p-5">
-              <div class="flex flex-row">
-
-                <!-- todo dynamically add tabs based on selected classes "views" property -->
-                <!-- todo maybe move this into it's own view, idk tho -->
-                <!-- todo needs better styling -->
-                <!-- todo write a home page with explanation -->
-
-                <div class="px-2">
-                  <router-link to="/">Home</router-link>
-                </div>
-
-                <div class="px-2">
-                  <router-link to="/about">About</router-link>
-                </div>
-
-                <div class="px-2">
-                  <router-link to="/the-arcana">The Arcana</router-link>
-                </div>
-              </div>
-            </nav>
-          </header>
+          <RouterHeader></RouterHeader>
 
           <!-- todo find some way to do this overflow correctly, might need to rework the entire styling to work with flex instead of grid -->
           <div class="p-[1%] max-h-[450px] overflow-auto">
