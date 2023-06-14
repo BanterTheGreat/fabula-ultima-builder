@@ -15,8 +15,6 @@ import RouterHeader from './views/router-header.vue';
 
 // Initial Calculating of values.
 new CharacterCalculator().Recalculate("statistics");
-
-
 </script>
 
 <template>
