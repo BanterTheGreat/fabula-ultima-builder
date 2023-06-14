@@ -9,11 +9,8 @@ import Bonds from './views/bonds.vue';
 import Segment from './views/segment.vue';
 import Statistic from './views/statistics.vue';
 import TraitInfo from './views/traits/trait-info.vue';
-import textWithBoldVue from './views/text-with-bold.vue';
 import characterBuilderVue from './views/character-builder.vue';
 import { ModalsContainer } from 'vue-final-modal';
-
-import router from './router';
 
 // Initial Calculating of values.
 new CharacterCalculator().Recalculate("statistics");
@@ -69,6 +66,7 @@ new CharacterCalculator().Recalculate("statistics");
         </SegmentBody>
       </Segment>
     </div>
+    
     <div class="col-span-6 row-span-4 mx-1">
       <Segment title="Big info panel">
         <!-- removed the padding on this segment to make the header look nice -->
@@ -89,21 +87,24 @@ new CharacterCalculator().Recalculate("statistics");
                 <div class="px-2">
                   <router-link to="/about">About</router-link>
                 </div>
+
+                <div class="px-2">
+                  <router-link to="/the-arcana">The Arcana</router-link>
+                </div>
               </div>
-
-
             </nav>
           </header>
-          
-          <div class="p-[1%]">
+
+          <!-- todo find some way to do this overflow correctly, might need to rework the entire styling to work with flex instead of grid -->
+          <div class="p-[1%] max-h-[450px] overflow-auto">
             <router-view></router-view>
           </div>
 
         </SegmentBody>
       </Segment>
     </div>
-    <!-- right side end -->
   </div>
+  <!-- right side end -->
 </template>
 
 <style scoped>
