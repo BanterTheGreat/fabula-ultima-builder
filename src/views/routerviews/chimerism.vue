@@ -3,5 +3,5 @@
 </script>
 
 <template>
-    arcana goes here
+    chimerism goes here
 </template>
