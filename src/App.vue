@@ -9,17 +9,15 @@ import Bonds from './views/bonds.vue';
 import Segment from './views/segment.vue';
 import Statistic from './views/statistics.vue';
 import TraitInfo from './views/traits/trait-info.vue';
-import textWithBoldVue from './views/text-with-bold.vue';
-import ClassList from './views/class-list.vue';
 import characterBuilderVue from './views/character-builder.vue';
 import { ModalsContainer } from 'vue-final-modal';
+import RouterHeader from './views/router-header.vue';
 
 // Initial Calculating of values.
 new CharacterCalculator().Recalculate("statistics");
 </script>
 
 <template>
-  
   <!-- Support Modals -->
   <ModalsContainer />
 
@@ -69,17 +67,23 @@ new CharacterCalculator().Recalculate("statistics");
         </SegmentBody>
       </Segment>
     </div>
+    
     <div class="col-span-6 row-span-4 mx-1">
       <Segment title="Big info panel">
-        <SegmentBody>
-          <textWithBoldVue text="You weave magical energy and protect the targets from the fury of the elements. \n Choose a damage type: __air__, __bolt__, __earth__, __fire__, __water__ or __ice__. Until this spell ends, each target gains Resistance against the chosen damage type." />
-          <ClassList/>
+        <!-- removed the padding on this segment to make the header look nice -->
+        <SegmentBody style="padding: 0 !important;">
+          <RouterHeader></RouterHeader>
+
+          <!-- todo find some way to do this overflow correctly, might need to rework the entire styling to work with flex instead of grid -->
+          <div class="p-[1%] max-h-[450px] overflow-auto">
+            <router-view></router-view>
+          </div>
+
         </SegmentBody>
       </Segment>
     </div>
-    <!-- right side end -->
   </div>
-
+  <!-- right side end -->
 </template>
 
 <style scoped>

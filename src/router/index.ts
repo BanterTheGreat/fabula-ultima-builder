@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../../auto generated files/HomeView.vue'
-import Info from '@/views/Info.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import Info from '@/views/info.vue';
+import TheArcana from '@/views/routerviews/the-arcana.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

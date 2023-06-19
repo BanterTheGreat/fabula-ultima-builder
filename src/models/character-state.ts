@@ -3,15 +3,17 @@ import type { Character } from "./character";
 import { JsonHelper } from "../helpers/json-helper";
 import { Attribute } from "./character/attribute";
 import { InitialiseChoices } from "@/helpers/choice-builder";
+import { ClassId } from "@/enums/class-id";
+import { Modifier } from "@/enums/modifier";
 
 export class CharacterState {
   constructor() {
     // We should load the character from cookies here.
     var tempCharacter: Character = {
       id: crypto.randomUUID(),
-      general: { 
-        name: "John", pronouns: "him", experience: 1, fabulaPoints: 1, level: 10, zenit: 300 
-      }, 
+      general: {
+        name: "John", pronouns: "him", experience: 1, fabulaPoints: 1, level: 10, zenit: 300
+      },
       traits: {
         identity: "Unknown",
         theme: "Couragious",
@@ -28,7 +30,7 @@ export class CharacterState {
       ],
       statistics: {
         healthPoints: { value: 0, calculatedValue: 0, currentValue: 0 },
-        mindPoints: { value: 0, calculatedValue: 0,  currentValue: 0 },
+        mindPoints: { value: 0, calculatedValue: 0, currentValue: 0 },
         inventoryPoints: { value: 0, calculatedValue: 0, currentValue: 0 },
         defense: { value: 0, calculatedValue: 0 },
         magicDefense: { value: 0, calculatedValue: 0 },
@@ -42,7 +44,44 @@ export class CharacterState {
         storedArmors: [],
         storedOffHand: [],
       },
-      classes: [],
+      classes: [
+        {
+          id: ClassId.Arcanist,
+          name: "Arcanist",
+          passives: {
+            modifier: {
+              stat: Modifier.Mind,
+              boost: 5,
+            },
+            proficiency: []
+          },
+          skills: {},
+          views: [
+            {
+              navHeader: "The arcana",
+              routerView: "the-arcana"
+            }
+          ],
+        },
+        {
+          id: ClassId.Chimerist,
+          name: "Chimerist",
+          passives: {
+            modifier: {
+              stat: Modifier.Mind,
+              boost: 5,
+            },
+            proficiency: []
+          },
+          skills: {},
+          views: [
+            {
+              navHeader: "Chimerism",
+              routerView: "chimerism"
+            }
+          ],
+        }
+      ],
       progression: InitialiseChoices(),
     }
 
